@@ -6,9 +6,11 @@
 body {
     background-color: #360b3d;
     overflow: hidden;
+    resize: none;
 }
 
 nav {
+    max-height: 4vh;
     color: #ffffff;
     background-color: #ea1c90;
     
@@ -24,8 +26,7 @@ nav p {
 }
 
 nav p:hover {
-    /* background-color: #591065; */
-    background-color: #fea459;
+    background-color: #f79648;
 }
 
 a, a:visited {
@@ -37,10 +38,15 @@ button {
     padding: 5px;
 }
 
-.dialog-box {
+body>footer {
+    height: calc();
+}
+
+dialog {
     min-width: 300px;
     max-width: 90vw;
     max-height: 80vh;
+    resize: none;
 
     border: 1px solid #fea459;
     background-color: #fdbd89;
@@ -49,25 +55,29 @@ button {
     position: absolute;
 }
 
-.dialog-box * {
-    padding: 5px;
+dialog * {
+    padding: 3px;
+    resize: none;
+    /* position: absolute; */
 }
 
-.dialog-box header, .dialog-box footer {
+dialog header, dialog footer {
     background-color: #ff9844;
 }
 
-.dialog-box header {
+dialog header {
     text-align: center;
 
     cursor: move;
 }
 
-.dialog-box main {
+dialog main {
     overflow: scroll;
     height: 50%;
+    padding: 5px;
+    width: 90%;
 }
 
-/* .dialog-box footer {
+/* dialog footer {
 
 } */

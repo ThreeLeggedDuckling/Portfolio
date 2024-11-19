@@ -1,25 +1,43 @@
 let selected = null;
-let x_pointer = 0;
-let y_pointer = 0;
-let x_elem = 0;
-let y_elem = 0;
+let pointerX = 0;
+let pointerY = 0;
+let elemX = 0;
+let elemY = 0;
 
 function _drag_init(elem) {
     selected = elem;    // garde en mémoire élément
-    x_elem = x_pointer - selected.offsetLeft;
-    y_elem = y_pointer - selected.offsetTop;
+    elemX = pointerX - selected.offsetLeft;
+    elemY = pointerY - selected.offsetTop;
 }
 
 function _move_elem(e) {
-    x_pointer = event.clientX;
-    y_pointer = event.clientY;
+    pointerX = e.clientX;
+    pointerY = e.clientY;
     if (selected !== null) {
-        selected.style.left = (x_pointer - x_elem) + 'px';
-        selected.style.top = (y_pointer - y_elem) + 'px';
+        nX = pointerX - elemX;
+        ny = pointerY - elemY;
+        
+        selected.style.left = nX > document.body.offsetWidth ? document.body.offsetWidth + 'px' : nX + 'px';
+        selected.style.top = (pointerY - elemY) + 'px';
+        
+        // selected.style.left = (pointerX - elemX) + 'px';
+        // selected.style.top = (pointerY - elemY) + 'px';
+        
+
+        // campling
+        // const vW = window.innerWidth;
+        // const vH = window.innerHeight;
+        // newX = Math.min(Math.max(x_pointer - x_elem, 50 - selected.offsetWidth), vW - 50);
+        // newY = Math.min(Math.max(y_pointer - y_elem, 50 - selected.offsetHeight), vH - 50);
+
+
+
+        // selected.style.left = newX + 'px';
+        // selected.style.top = newY + 'px';
     }
 }
 
-// destruction objet stockant élément
+// destruction objet mémoire
 function _destroy() {
     selected = null;
 }
@@ -31,9 +49,7 @@ function drag() {
     document.onmouseup = _destroy;
 }
 
-
-
-let dialogs = document.getElementsByClassName('dialog-box');
+let dialogs = document.getElementsByTagName('dialog');
 for (const d of dialogs) {
     d.firstElementChild.onmousedown = drag;
 }
