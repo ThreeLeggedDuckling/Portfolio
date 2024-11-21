@@ -1,13 +1,74 @@
+/*
+    GENERAL
+*/
+
+@font-face {
+    font-family: 'Cordata PPC-400';
+    src: url(assets/fonts/Web437_Cordata_PPC-400.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Cordata PPC-400';
 }
 
 body {
-    background-color: #360b3d;
+    background: linear-gradient(#0c092e 0%, #600d63 100%);
     overflow: hidden;
-    resize: none;
+    height: 100vh;
 }
+
+a, a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*
+    - classes
+*/
+
+.space {
+    flex-grow: 2;
+}
+
+.closeForm, .squareCorner {
+    height: 10px;
+    width: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: stretch;
+}
+
+.close {
+    height: 10px;
+    width: 10px;
+    
+    border: none;
+    background-color: inherit;
+    background-image: url(assets/img/cross-close.svg);
+    background-size: cover;
+}
+
+/* adapter tailles selon media query */
+.small {
+    width: 300px;
+}
+
+.medium {
+    width: 500px;
+}
+
+.large {
+    width: 700px;
+}
+
+
+/*
+    NAV
+*/
 
 nav {
     max-height: 4vh;
@@ -16,11 +77,12 @@ nav {
     
     display: flex;
     flex-direction: row;
+    align-items: last baseline;
 }
 
 nav p {
     padding: 5px;
-    width: 70px;
+
     text-align: center;
     /* border: 1px solid #000000; */
 }
@@ -29,22 +91,18 @@ nav p:hover {
     background-color: #f79648;
 }
 
-a, a:visited {
-    color: #ffffff;
-    text-decoration: none;
+nav .space:hover {
+    background-color: #ea1c90;
 }
 
-button {
-    padding: 5px;
-}
 
-body>footer {
-    height: calc();
-}
+/*
+    DIALOG
+*/
 
 dialog {
-    min-width: 300px;
-    max-width: 90vw;
+    /* min-width: 300px;
+    max-width: 90vw; */
     max-height: 80vh;
     resize: none;
 
@@ -58,7 +116,18 @@ dialog {
 dialog * {
     padding: 3px;
     resize: none;
-    /* position: absolute; */
+}
+
+dialog .space {
+    margin: 7px;
+    height: 10px;
+    background-color: #f79648;
+    background-image: url(assets/img/system7_halftonebit.png);
+    background-blend-mode: darken;
+}
+
+dialog header button {
+    padding: 5px;
 }
 
 dialog header, dialog footer {
@@ -66,18 +135,41 @@ dialog header, dialog footer {
 }
 
 dialog header {
-    text-align: center;
-
     cursor: move;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 dialog main {
     overflow: scroll;
-    height: 50%;
     padding: 5px;
-    width: 90%;
+
+    display: flex;
+    /* justify-content: space-between; */
 }
 
-/* dialog footer {
+dialog main>* {
+    margin: 10px;
+}
 
-} */
+dialog header h1 {
+    font-size: medium;
+}
+
+
+/*
+    SPECIFIQUE
+*/
+
+#ducky {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff80;
+    border-radius: 50%;
+}
+
+#langlink {
+    padding: 0;
+}

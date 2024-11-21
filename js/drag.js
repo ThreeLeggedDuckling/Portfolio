@@ -14,26 +14,9 @@ function _move_elem(e) {
     pointerX = e.clientX;
     pointerY = e.clientY;
     if (selected !== null) {
-        nX = pointerX - elemX;
-        ny = pointerY - elemY;
-        
-        selected.style.left = nX > document.body.offsetWidth ? document.body.offsetWidth + 'px' : nX + 'px';
+        selected.style.left = (pointerX - elemX) + 'px';
         selected.style.top = (pointerY - elemY) + 'px';
-        
-        // selected.style.left = (pointerX - elemX) + 'px';
-        // selected.style.top = (pointerY - elemY) + 'px';
-        
-
-        // campling
-        // const vW = window.innerWidth;
-        // const vH = window.innerHeight;
-        // newX = Math.min(Math.max(x_pointer - x_elem, 50 - selected.offsetWidth), vW - 50);
-        // newY = Math.min(Math.max(y_pointer - y_elem, 50 - selected.offsetHeight), vH - 50);
-
-
-
-        // selected.style.left = newX + 'px';
-        // selected.style.top = newY + 'px';
+        // trouver comment empêcher redimension extrimité droite
     }
 }
 
