@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="js/main.js" defer></script>
     <script src="js/drag.js" defer></script>
+    <script src="js/portfolio.js" defer></script>
 
     <title>My portfolio</title>
 </head>
@@ -14,14 +15,31 @@
 
     <nav>
         <p id="about_nav" class="icon">About</p>
-        <p id="resume_nav" class="icon">Resume</p>
-        <p id="portfolio_nav" class="icon">Portfolio</p>
+        <div class="drop">
+            <!-- changer en bouton -->
+            <p id="resume_nav" class="icon">Resume</p>
+            <div class="dropped">
+                <p id="resume_edu">Education</p>
+                <p id="resume_exp">Experience</p>
+                <p id="resume_skl">Skills</p>
+            </div>
+        </div>
+        <div class="drop">
+            <!-- changer en bouton -->
+            <p id="portfolio_nav" class="icon">Portfolio</p>
+            <div class="dropped">
+                <p id="portfolio_all">View all</p>
+                <p id="portfolio_back">Experience</p>
+                <p id="portfolio_front">Skills</p>
+            </div>
+        </div>
         <p id="contact_nav" class="icon">Contact</p>
         <p class="space"></p>
         <p id="lang"><a href="index.fr.html">FR</a></p>
     </nav>
     
 
+    <!-- fenêtre à propos -->
     <dialog id="about_window" class="medium">
         <header>
             <div class="squareCorner"></div>
@@ -43,6 +61,7 @@
         </footer>
     </dialog>
 
+    <!-- fenêtre cv -->
     <dialog id="resume_window" class="medium">
         <header>
             <div class="squareCorner"></div>
@@ -55,7 +74,7 @@
         </header>
         <main>
             <div id="tabs">
-                
+
             </div>
             <div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, voluptatibus consequuntur aliquam sunt tempora autem accusamus dolorum alias numquam qui sequi, officiis eum amet veritatis aperiam voluptas obcaecati natus possimus.</p>
@@ -65,6 +84,7 @@
         </footer>
     </dialog>
 
+    <!-- fenêtre portfolio -->
     <dialog id="portfolio_window" class="large">
         <header>
             <div class="squareCorner"></div>
@@ -76,12 +96,65 @@
             </form>
         </header>
         <main>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi earum quo molestiae perspiciatis eaque quas! Dolore dignissimos quam sunt repellendus voluptatem voluptates suscipit a saepe, possimus quas adipisci blanditiis nam.</p>
+            <div id="folders" class="panel">
+                <p id="root">My projects</p>
+                <div id="subfolders">
+                    <p id="backend">Backend</p>
+                    <p id="frontend">Frontend</p>
+                </div>
+            </div>
+
+            <div id="list" class="panel">
+                <p class="front css js">Portfolio</p>
+                <p class="back php js symfony">Table Tavern</p>
+                <p class="back php">Carbon Quest</p>
+                <p class="front css js">top_secret_project_1</p>
+                <p class="back csharp">top_secret_project_2</p>
+                <p class="back python">top_secret_project_3</p>
+            </div>
+
+            <div id="infos" class="panel">
+                <div>
+                    <p class="label">Name</p>
+                    <p id="i_title"></p>
+                </div>
+                <div>
+                    <p class="label">Technologies</p>
+                    <p id="i_tech"></p>
+                </div>
+                <div>
+                    <p class="label">Description</p>
+                    <p id="i_desc"></p>
+                </div>
+                <div>
+                    <p class="label">Link(s)</p>
+                    <p id="i_links"></p>
+                </div>
+            </div>
         </main>
         <footer>
         </footer>
     </dialog>
 
+    <!-- base fenêtre projet -->
+    <dialog id="project_window" class="medium">
+        <header>
+            <div class="squareCorner"></div>
+            <p class="space"></p>
+            <!-- changer titre à "chargement" -->
+            <h1></h1>
+            <p class="space"></p>
+            <form method="dialog" class="closeForm">
+                <button class="close"></button>
+            </form>
+        </header>
+        <main>
+        </main>
+        <footer>
+        </footer>
+    </dialog>
+
+    <!-- fenêtre contact -->
     <dialog id="contact_window" class="small">
         <header>
             <div class="squareCorner"></div>
@@ -93,7 +166,16 @@
             </form>
         </header>
         <main>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, tenetur?</p>
+            <h2>Ways to reach me</h2>
+            <!--
+                linkedin
+                github
+                form mailto ?
+            -->
+            <div id="links">
+                <a href="https://www.linkedin.com/in/melusine-christophe/"><img src="assets/img/logo-linkedin.svg" alt="" class="logo"></a>
+                <a href="https://github.com/ThreeLeggedDuckling"><img src="assets/img/logo-github.svg" alt="" class="logo"></a>
+            </div>
         </main>
         <footer>
         </footer>

@@ -30,8 +30,36 @@ a, a:visited {
     - classes
 */
 
+/* adapter tailles selon media query */
+.small {
+    width: 300px;
+}
+
+.medium {
+    width: 500px;
+}
+
+.large {
+    width: 700px;
+}
+
 .space {
     flex-grow: 2;
+}
+
+.drop {
+    position: relative;
+    display: inline-block;
+    background-color: inherit;
+}
+
+.dropped {
+    display: none;
+    position: absolute;
+}
+
+.drop:hover .dropped {
+    display: block;
 }
 
 .closeForm, .squareCorner {
@@ -52,17 +80,13 @@ a, a:visited {
     background-size: cover;
 }
 
-/* adapter tailles selon media query */
-.small {
-    width: 300px;
+.logo {
+    height: 20px;
+    width: 20px;
 }
 
-.medium {
-    width: 500px;
-}
-
-.large {
-    width: 700px;
+.links {
+    display: flex;
 }
 
 
@@ -81,10 +105,8 @@ nav {
 }
 
 nav p {
-    padding: 5px;
-
+    padding: 7px;
     text-align: center;
-    /* border: 1px solid #000000; */
 }
 
 nav p:hover {
@@ -95,16 +117,33 @@ nav .space:hover {
     background-color: #ea1c90;
 }
 
+nav .dropped {
+    background-color: #ea1c90;
+    text-align: left;
+    border: 1px solid #f79648;
+    /* border-top: none; */
+    border-radius: 2px;
+}
+
+nav .drop:first-child
+
 
 /*
     DIALOG
 */
 
+dialog header button {
+    padding: 5px;
+}
+
+dialog header, dialog footer {
+    background-color: #ff9844;
+}
+
 dialog {
-    /* min-width: 300px;
-    max-width: 90vw; */
     max-height: 80vh;
-    resize: none;
+    left: 30px;
+    top: 75px;
 
     border: 1px solid #fea459;
     background-color: #fdbd89;
@@ -115,7 +154,6 @@ dialog {
 
 dialog * {
     padding: 3px;
-    resize: none;
 }
 
 dialog .space {
@@ -124,14 +162,6 @@ dialog .space {
     background-color: #f79648;
     background-image: url(assets/img/system7_halftonebit.png);
     background-blend-mode: darken;
-}
-
-dialog header button {
-    padding: 5px;
-}
-
-dialog header, dialog footer {
-    background-color: #ff9844;
 }
 
 dialog header {
@@ -157,6 +187,51 @@ dialog main>* {
 dialog header h1 {
     font-size: medium;
 }
+
+/*
+    - resume
+*/
+
+
+
+/*
+    - portfolio
+*/
+
+.panel {
+    border: 1px solid black;
+}
+
+#folders {
+    box-sizing: border-box;
+}
+
+#subfolders {
+    content-visibility: hidden;
+}
+
+#folders p:hover, #list p:hover {
+    background-color: #600d63b3;
+}
+
+#infos {
+    flex-grow: 2;
+    content-visibility: hidden;
+}
+
+.label {
+    font-weight: bold;
+}
+
+
+/*
+    - contact
+*/
+
+#contact_window main {
+    display: block;
+}
+
 
 
 /*
