@@ -1,3 +1,4 @@
+// variable drag
 let selected = null;
 let pointerX = 0;
 let pointerY = 0;
@@ -32,7 +33,19 @@ function drag() {
     document.onmouseup = _destroy;
 }
 
+let lastFocus;
 let dialogs = document.getElementsByTagName('dialog');
 for (const d of dialogs) {
+    
+    // mise en avant
+    d.addEventListener('click', () => {
+        if (typeof lastFocus !== 'undefined' && lastFocus !== d) {
+            lastFocus.classList.remove('foreground');
+        }
+        lastFocus = d;
+        lastFocus.classList.add('foreground');
+    })
+
+    // mobilité
     d.firstElementChild.onmousedown = drag;
 }
