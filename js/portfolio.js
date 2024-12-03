@@ -1,3 +1,5 @@
+
+
 const portfolio = document.getElementById('portfolio_window');
 const rootfolder = document.getElementById('root');
 const subfolders = document.getElementById('subfolders');
@@ -44,11 +46,31 @@ portfolio.addEventListener('click', (e) => {
     // click projet
     if (Array.from(projectList.children).includes(e.target))
     {
-        // console.log('infoDisplay.children :>> ', infoDisplay.children);
-        for (const l of infoDisplay.children) {
-            l.style.display = "block";
-            //
-        }
+        fetch("../data.json")
+        .then(res => res.json())
+        .then(data =>  {
+            for (const elem of infoDisplay.children) {
+                elem.style.display = "block";
+                let contentfield = elem.lastElementChild;
+                let contentdata = data.projects[e.target.id.substring(4)][contentfield.id.substring(2)];
+
+                if (contentfield.id.substring(2) != "links") {
+                    contentfield.textContent = contentdata;
+                } else {
+
+                    contentfield.innerHTML = "";
+                    for (const k of Object.keys(contentdata)) {
+                        let nA = document.createElement('a');
+                        nA.textContent = k;
+                        nA.href = contentdata[k];
+                        contentfield.append(nA);
+                    }
+                    
+                }
+
+            }
+
+        })
     }
 
 })

@@ -1,5 +1,3 @@
-import data from 'data.json' assert {type: 'json'};
-
 // ouverture "fenêtres"
 let icons = document.getElementsByClassName('icon');
 for (const i of icons) {

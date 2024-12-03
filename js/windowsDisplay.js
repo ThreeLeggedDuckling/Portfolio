@@ -1,3 +1,13 @@
+/*  VERSION DYNAMIQUE    (pas finie)
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 625) {
+            console.log('enough :>> ', window.innerWidth);
+        } else {
+            console.log('too small :>> ', window.innerWidth);
+        }
+    })
+*/
+
 // variable drag
 let selected = null;
 let pointerX = 0;
@@ -18,6 +28,7 @@ function _move_elem(e) {
         selected.style.left = (pointerX - elemX) + 'px';
         selected.style.top = (pointerY - elemY) + 'px';
         // trouver comment empêcher redimension extrimité droite
+        // ... bypassed par taille prédéfinie
     }
 }
 
@@ -35,17 +46,21 @@ function drag() {
 
 let lastFocus;
 let dialogs = document.getElementsByTagName('dialog');
-for (const d of dialogs) {
-    
-    // mise en avant
-    d.addEventListener('click', () => {
-        if (typeof lastFocus !== 'undefined' && lastFocus !== d) {
-            lastFocus.classList.remove('foreground');
-        }
-        lastFocus = d;
-        lastFocus.classList.add('foreground');
-    })
+// condition display width
+if (window.innerWidth > 625) {
+    for (const d of dialogs) {
 
-    // mobilité
-    d.firstElementChild.onmousedown = drag;
+        // mise en avant
+        d.addEventListener('click', () => {
+            if (typeof lastFocus !== 'undefined' && lastFocus !== d) {
+                lastFocus.classList.remove('foreground');
+            }
+            lastFocus = d;
+            lastFocus.classList.add('foreground');
+        })
+    
+        // mobilité
+        d.firstElementChild.onmousedown = drag;
+
+    }
 }

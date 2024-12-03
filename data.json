@@ -1,3 +1,61 @@
 {
-    "text_test" : "bonjour je suis du texte"
+    "text_test" : "bonjour je suis du texte",
+    "projects" : [
+        {
+            "title" : "top_secret_project_3",
+            "type" : "back",
+            "tech" : [ "Python" ],
+            "desc" : "Yet another top secret project soon to be revealed",
+            "links" : {
+                
+            }
+        },
+        {
+            "title" : "top_secret_project_2",
+            "type" : "back",
+            "tech" : [ "CSharp" ],
+            "desc" : "Antother top secret project soon to be revealed",
+            "links" : {
+                
+            }
+        },
+        {
+            "title" : "top_secret_project_1",
+            "type" : "front",
+            "tech" : [ "HTML", "CSS", "JavaScript" ],
+            "desc" : "A top secret project soon to be revealed",
+            "links" : {
+                
+            }
+        },
+        {
+            "title" : "Portfolio",
+            "type" : "front",
+            "tech" : [ "HTML", "CSS", "JavaScript" ],
+            "desc" : "The wonderful website you're vieiwing",
+            "links" : {
+                "github" : ""
+            }
+        },
+        {
+            "title" : "Table Tavern",
+            "type" : "back",
+            "tech" : [ "PHP", "Symfony" ],
+            "desc" : "Symfony project made at Interface3",
+            "links" : {
+                "github" : "",
+                "i3" : ""
+            }
+        },
+        {
+            "title" : "Carbon Quest",
+            "type" : "back",
+            "tech" : [ "PHP" ],
+            "desc" : "Hackaton project made in 3 days at Interface3.",
+            "links" : {
+                "github" : "",
+                "i3" : ""
+            }
+        }
+    ]
 }

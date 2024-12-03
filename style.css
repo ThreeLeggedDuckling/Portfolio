@@ -180,6 +180,7 @@ dialog header {
 dialog main {
     overflow: scroll;
     padding: 5px;
+    max-height: 90%;
 
     display: flex;
     /* justify-content: space-between; */
@@ -205,6 +206,7 @@ dialog header h1 {
 
 .panel {
     border: 1px solid black;
+    max-height: 90%;
 }
 
 #folders {
@@ -225,6 +227,11 @@ dialog header h1 {
 
 #infos>* {
     display: none;
+}
+
+#i_desc {
+    max-height: 50%;
+    overflow: scroll;
 }
 
 .label {
