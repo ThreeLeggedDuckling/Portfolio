@@ -1,0 +1,17 @@
+/*
+    DIALOG
+*/
+
+dialog {
+    width: 100%;
+}
+
+/*  portfolio       */
+
+#portfolio_window main {
+    flex-direction: column;
+}
+
+#infos {
+    display: none;
+}

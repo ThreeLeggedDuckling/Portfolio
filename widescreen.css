@@ -1,0 +1,60 @@
+/*
+    GENERAL
+*/
+
+/*  classes     */
+
+.foreground {
+    z-index: 1000;
+}
+
+.small {
+    width: 300px;
+}
+
+.medium {
+    width: 500px;
+}
+
+.large {
+    width: 700px;
+}
+
+
+/*
+    DIALOG
+*/
+
+dialog {
+    max-height: 80vh;
+    left: 30px;
+    top: 75px;
+    position: absolute;
+}
+
+dialog header {
+    cursor: move;
+}
+
+/*  portfolio     */
+
+#subfolders {
+    display: none;
+}
+
+#folders p:hover, #list p:hover {
+    background-color: var(--pink2a);
+}
+
+#infos {
+    flex-grow: 2;
+}
+
+#infos>* {
+    display: none;
+}
+
+#i_desc {
+    max-height: 50%;
+    overflow: scroll;
+}

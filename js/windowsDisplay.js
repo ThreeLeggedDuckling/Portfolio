@@ -1,6 +1,6 @@
 /*  VERSION DYNAMIQUE    (pas finie)
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 625) {
+        if (window.innerWidth > 600) {
             console.log('enough :>> ', window.innerWidth);
         } else {
             console.log('too small :>> ', window.innerWidth);
@@ -47,7 +47,7 @@ function drag() {
 let lastFocus;
 let dialogs = document.getElementsByTagName('dialog');
 // condition display width
-if (window.innerWidth > 625) {
+if (window.innerWidth > 600) {
     for (const d of dialogs) {
 
         // mise en avant

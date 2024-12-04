@@ -1,5 +1,3 @@
-
-
 const portfolio = document.getElementById('portfolio_window');
 const rootfolder = document.getElementById('root');
 const subfolders = document.getElementById('subfolders');
@@ -12,10 +10,39 @@ const nBack = projectList.querySelectorAll('p:not(.back)');
 const nFront = projectList.querySelectorAll('p:not(.front)');
 
 portfolio.addEventListener('click', (e) => {
+    // click folder
+    if ([rootfolder, backfolder, frontfolder].includes(e.target)) {
+
+        // effacer choix précédent
+        if (typeof folderChoice !== 'undefined') {
+            folderChoice.classList.remove('selectedDisplay');
+        }
+
+        // nouveau choix
+        folderChoice = e.target;
+        folderChoice.classList.add('selectedDisplay');
+    }
+
+    if (Array.from(projectList.children).includes(e.target)) {
+
+        // effacer choix précédent
+        if (typeof projectChoice !== 'undefined') {
+            projectChoice.classList.remove('selectedDisplay');
+        }
+
+        // nouveau choix
+        projectChoice = e.target;
+        projectChoice.classList.add('selectedDisplay');
+    }
+
     // click "My projects"
     if (e.target == rootfolder) {
-        let visible = subfolders.style.display;
-        subfolders.style.display = (visible == "" || visible == "none") ? "block" : "none";
+        
+        // (dés)-affichage subfolders
+        if (window.innerWidth > 600) {
+            let visible = subfolders.style.display;
+            subfolders.style.display = (visible == "" || visible == "none") ? "block" : "none";
+        }
 
         // afficher projets
         for (const p of document.querySelectorAll('#list>p')) {
@@ -49,8 +76,13 @@ portfolio.addEventListener('click', (e) => {
         fetch("../data.json")
         .then(res => res.json())
         .then(data =>  {
+            if (window.innerWidth < 600) {
+                infoDisplay.style.display = "block";
+            }
             for (const elem of infoDisplay.children) {
-                elem.style.display = "block";
+                if (window.innerWidth > 600) {
+                    elem.style.display = "block";
+                }
                 let contentfield = elem.lastElementChild;
                 let contentdata = data.projects[e.target.id.substring(4)][contentfield.id.substring(2)];
 
