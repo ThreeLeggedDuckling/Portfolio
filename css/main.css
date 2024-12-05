@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'Cordata PPC-400';
-    src: url(assets/fonts/Web437_Cordata_PPC-400.woff) format('woff');
+    src: url(../assets/fonts/Web437_Cordata_PPC-400.woff) format('woff');
     font-weight: normal;
     font-style: normal;
   }
@@ -168,10 +168,18 @@ dialog header {
 dialog main {
     overflow: scroll;
     padding: 5px;
-    max-height: 90%;
+    height: 85%;
 
     display: flex;
     /* justify-content: space-between; */
+}
+
+dialog footer {
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 dialog main>* {
@@ -190,7 +198,6 @@ dialog header h1 {
 
 .panel {
     border: 1px solid black;
-    max-height: 90%;
 }
 
 #folders {

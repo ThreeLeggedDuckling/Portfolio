@@ -1,0 +1,157 @@
+{
+    "tabs" : {
+        "EN" : [
+            "About", "Resume", "Portfolio", "Contact"
+        ],
+        "FR" : []
+    },
+    "about" : {
+        "EN" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vel beatae aspernatur esse exercitationem temporibus sed voluptas animi praesentium necessitatibus!",
+        "FR" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio praesentium exercitationem culpa sint, accusantium eum in! Adipisci sequi temporibus eum!"
+    },
+    "resume" : {
+        "tabs" : {
+            "EN" : [
+                "Education", "Experience", "Skills"
+            ],
+            "FR" : []
+        },
+        "education" : [
+            {
+            "date" : "",
+            "name" : {
+                "EN" : "",
+                "FR" : ""
+            },
+            "loc" : {
+                "EN" : "",
+                "FR" : ""
+            },
+            "desc" : {
+                "EN" : "",
+                "FR" : ""
+            }
+            }
+        ],
+        "experience" : [
+            {
+            "date" : "",
+            "name" : {
+                "EN" : "",
+                "FR" : ""
+            },
+            "loc" : {
+                "EN" : "",
+                "FR" : ""
+            },
+            "desc" : {
+                "EN" : "",
+                "FR" : ""
+            }
+            }
+        ],
+        "Skills" : {
+            "hard" : {
+                "front" : [
+                    {
+                        "name" : "",
+                        "lvl" : 0
+                    }
+                ],
+                "back" : [
+                    {
+                        "name" : "",
+                        "lvl" : 0
+                    }
+                ],
+                "data" : [
+                    {
+                        "name" : "",
+                        "lvl" : 0
+                    }
+                ]
+            },
+            "soft" : {
+                "EN" : [],
+                "FR" : []
+            }
+        }
+    },
+    "portfolio" : [
+        {
+            "title" : "top_secret_project_3",
+            "type" : "back",
+            "tech" : [ "Python" ],
+            "desc" : {
+                "EN" : "Yet another top secret project soon to be revealed.",
+                "FR" : ""
+            },
+            "links" : {
+                "github" : "",
+                "i3" : ""
+            }
+        },
+        {
+            "title" : "top_secret_project_2",
+            "type" : "back",
+            "tech" : [ "CSharp" ],
+            "desc" : {
+                "EN" : "Antother top secret project soon to be revealed.",
+                "FR" : ""
+            },
+            "links" : {}
+        },
+        {
+            "title" : "top_secret_project_1",
+            "type" : "front",
+            "tech" : [ "HTML", "CSS", "JavaScript" ],
+            "desc" : {
+                "EN" : "A top secret project soon to be revealed.",
+                "FR" : ""
+            },
+            "links" : {}
+        },
+        {
+            "title" : "Portfolio",
+            "type" : "front",
+            "tech" : [ "HTML", "CSS", "JavaScript" ],
+            "desc" : {
+                "EN" : "The wonderful website you're vieiwing.",
+                "FR" : ""
+            },
+            "links" : {
+                "github" : ""
+            }
+        },
+        {
+            "title" : "Table Tavern",
+            "type" : "back",
+            "tech" : [ "PHP", "Symfony" ],
+            "desc" : {
+                "EN" : "Symfony project made at Interface3.",
+                "FR" : ""
+            },
+            "links" : {
+                "github" : "",
+                "i3" : ""
+            }
+        },
+        {
+            "title" : "Carbon Quest",
+            "type" : "back",
+            "tech" : [ "PHP" ],
+            "desc" : {
+                "EN" : "Hackaton project made in 3 days at Interface3.",
+                "FR" : ""
+            },
+            "links" : {
+                "github" : "",
+                "i3" : ""
+            }
+        }
+    ],
+    "contact" : {
+        "linkedIn" : "",
+        "GitHub" : ""
+    }
+}

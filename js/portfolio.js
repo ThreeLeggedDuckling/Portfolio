@@ -73,7 +73,7 @@ portfolio.addEventListener('click', (e) => {
     // click projet
     if (Array.from(projectList.children).includes(e.target))
     {
-        fetch("../data.json")
+        fetch("../content.json")
         .then(res => res.json())
         .then(data =>  {
             if (window.innerWidth < 600) {
@@ -84,9 +84,13 @@ portfolio.addEventListener('click', (e) => {
                     elem.style.display = "block";
                 }
                 let contentfield = elem.lastElementChild;
-                let contentdata = data.projects[e.target.id.substring(4)][contentfield.id.substring(2)];
+                let contentdata = data.portfolio[e.target.id.substring(4)][contentfield.id.substring(2)];
 
-                if (contentfield.id.substring(2) != "links") {
+                if (contentfield.id.substring(2) == "desc") {
+                    let lang = document.getElementById('lang').textContent;
+                    contentfield.textContent = contentdata[lang];
+                }
+                else if (contentfield.id.substring(2) != "links") {
                     contentfield.textContent = contentdata;
                 } else {
 
