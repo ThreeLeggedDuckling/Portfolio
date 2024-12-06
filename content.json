@@ -3,7 +3,9 @@
         "EN" : [
             "About", "Resume", "Portfolio", "Contact"
         ],
-        "FR" : []
+        "FR" : [
+            "A propos", "CV", "Portfolio", "Contact"
+        ]
     },
     "about" : {
         "EN" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vel beatae aspernatur esse exercitationem temporibus sed voluptas animi praesentium necessitatibus!",
@@ -14,39 +16,41 @@
             "EN" : [
                 "Education", "Experience", "Skills"
             ],
-            "FR" : []
+            "FR" : [
+                "Formation", "Expérience", "Compétence"
+            ]
         },
         "education" : [
             {
-            "date" : "",
+            "date" : "2024 - 2025",
             "name" : {
-                "EN" : "",
-                "FR" : ""
+                "EN" : "Web Application Developper",
+                "FR" : "Web Application Developper"
             },
             "loc" : {
-                "EN" : "",
-                "FR" : ""
+                "EN" : "Interface 3, Brussels",
+                "FR" : "Interface 3, Bruxelles"
             },
             "desc" : {
-                "EN" : "",
-                "FR" : ""
+                "EN" : "13 months long formation in fullstack developpment.",
+                "FR" : "Formation de 13 mois en développement fullstack."
             }
             }
         ],
         "experience" : [
             {
-            "date" : "",
+            "date" : "2020",
             "name" : {
-                "EN" : "",
-                "FR" : ""
+                "EN" : "Teaching assistant in Social Network Analysis",
+                "FR" : "Etudiant assistant pour le cours de Social Network Analysis"
             },
             "loc" : {
-                "EN" : "",
-                "FR" : ""
+                "EN" : "Université Libre de Bruxelles, Brussels",
+                "FR" : "Université Libre de Bruxelles, Bruxelles"
             },
             "desc" : {
-                "EN" : "",
-                "FR" : ""
+                "EN" : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                "FR" : "Lorem ipsum dolor sit amet consectetur adipisicing elit."
             }
             }
         ],
@@ -54,26 +58,42 @@
             "hard" : {
                 "front" : [
                     {
-                        "name" : "",
-                        "lvl" : 0
+                        "name" : "HTML",
+                        "lvl" : 3
+                    },
+                    {
+                        "name" : "CSS",
+                        "lvl" : 2
+                    },
+                    {
+                        "name" : "JavaScript",
+                        "lvl" : 3
                     }
                 ],
                 "back" : [
                     {
-                        "name" : "",
-                        "lvl" : 0
+                        "name" : "PHP",
+                        "lvl" : 3
+                    },
+                    {
+                        "name" : "C#",
+                        "lvl" : 1
                     }
                 ],
                 "data" : [
                     {
-                        "name" : "",
-                        "lvl" : 0
+                        "name" : "SQL",
+                        "lvl" : 2
                     }
                 ]
             },
             "soft" : {
-                "EN" : [],
-                "FR" : []
+                "EN" : [
+                    "Adaptability", "Team work"
+                ],
+                "FR" : [
+                    "Adaptation", "Travail d'équipe"
+                ]
             }
         }
     },
@@ -151,7 +171,7 @@
         }
     ],
     "contact" : {
-        "linkedIn" : "",
-        "GitHub" : ""
+        "linkedIn" : "https://www.linkedin.com/in/melusine-christophe/",
+        "GitHub" : "https://github.com/ThreeLeggedDuckling"
     }
 }

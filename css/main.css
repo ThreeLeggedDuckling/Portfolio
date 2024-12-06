@@ -75,7 +75,7 @@ a, a:visited {
     
     border: none;
     background-color: inherit;
-    background-image: url(assets/img/cross-close.svg);
+    background-image: url(../assets/img/cross-close.svg);
     background-size: cover;
 }
 
@@ -153,7 +153,7 @@ dialog .space {
     margin: 7px;
     height: 10px;
     background-color: var(--orange1);
-    background-image: url(assets/img/system7_halftonebit.png);
+    background-image: url(../assets/img/system7_halftonebit.png);
     background-blend-mode: darken;
 }
 
@@ -192,7 +192,18 @@ dialog header h1 {
 
 /*  resume      */
 
+#resume_window main {
+    display: flex;
+    flex-direction: column;
+}
 
+#resume_tabs {
+    display: flex;
+}
+
+#resume_tabs p {
+    border: 1px solid black;
+}
 
 /*  portfolio   */
 
