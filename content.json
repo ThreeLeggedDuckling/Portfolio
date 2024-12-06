@@ -22,48 +22,85 @@
         },
         "education" : [
             {
-            "date" : "2024 - 2025",
-            "name" : {
-                "EN" : "Web Application Developper",
-                "FR" : "Web Application Developper"
+                "date" : "2024 - 2025",
+                "name" : {
+                    "EN" : "Web Application Developper",
+                    "FR" : "Web Application Developper"
+                },
+                "loc" : {
+                    "EN" : "Interface 3, Brussels",
+                    "FR" : "Interface 3, Bruxelles"
+                },
+                "desc" : {
+                    "EN" : "13 months long formation in fullstack developpment.",
+                    "FR" : "Formation de 13 mois en développement fullstack."
+                }
             },
-            "loc" : {
-                "EN" : "Interface 3, Brussels",
-                "FR" : "Interface 3, Bruxelles"
+            {
+                "date" : "2019 - 2022",
+                "name" : {
+                    "EN" : "MA in Criminology (interupted)",
+                    "FR" : "Master en Criminologie (interrompu)"
+                },
+                "loc" : {
+                    "EN" : "Université Libre de Bruxelles, Brussels",
+                    "FR" : "Université Libre de Bruxelles, Bruxelles"
+                }
             },
-            "desc" : {
-                "EN" : "13 months long formation in fullstack developpment.",
-                "FR" : "Formation de 13 mois en développement fullstack."
-            }
+            {
+                "date" : "2020",
+                "name" : {
+                    "EN" : "BA in Human and Social Sciences",
+                    "FR" : "Bachelier en Sciences Humaines et Sociales"
+                },
+                "loc" : {
+                    "EN" : "Université Libre de Bruxelles, Brussels",
+                    "FR" : "Université Libre de Bruxelles, Bruxelles"
+                }
             }
         ],
         "experience" : [
             {
-            "date" : "2020",
-            "name" : {
-                "EN" : "Teaching assistant in Social Network Analysis",
-                "FR" : "Etudiant assistant pour le cours de Social Network Analysis"
+                "date" : "2021",
+                "name" : {
+                    "EN" : "Assistant student fot the course *Social Network Analysis*",
+                    "FR" : "Etudiant assistant pour le cours *Social Network Analysis*"
+                },
+                "loc" : {
+                    "EN" : "Université Libre de Bruxelles, Brussels",
+                    "FR" : "Université Libre de Bruxelles, Bruxelles"
+                },
+                "desc" : {
+                    "EN" : "Pedagogical support in solving statistics exercises, technical support in R and in using R Studio.",
+                    "FR" : "Soutien pédagogique à la résolution d'exercices de statistiques, soutien technique en R et à l'utilisation de R Studio."
+                }
             },
-            "loc" : {
-                "EN" : "Université Libre de Bruxelles, Brussels",
-                "FR" : "Université Libre de Bruxelles, Bruxelles"
-            },
-            "desc" : {
-                "EN" : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                "FR" : "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-            }
+            {
+                "date" : "2019 (6m)",
+                "name" : {
+                    "EN" : "Assistant student for the course *Formalisation for social and political sciences*.",
+                    "FR" : "Etudiant assistant pour le cours *Formalisation pour les sciences sociales et politiques*"
+                },
+                "loc" : {
+                    "EN" : "Université Libre de Bruxelles, Brussels",
+                    "FR" : "Université Libre de Bruxelles, Bruxelles"
+                },
+                "desc" : {
+                    "EN" : "Pedagogical support for solving algebra and formal logic exercises.",
+                    "FR" : "Soutien pédagogique à la résolution d'exercices d'algèbre et de logique formelle."
+                }
             }
         ],
         "Skills" : {
             "hard" : {
                 "front" : [
                     {
-                        "name" : "HTML",
-                        "lvl" : 3
-                    },
-                    {
                         "name" : "CSS",
                         "lvl" : 2
+                    },
+                    {
+                        "name" : "HTML",
+                        "lvl" : 3
                     },
                     {
                         "name" : "JavaScript",
@@ -72,15 +109,23 @@
                 ],
                 "back" : [
                     {
+                        "name" : "C#",
+                        "lvl" : 1
+                    },
+                    {
                         "name" : "PHP",
                         "lvl" : 3
                     },
                     {
-                        "name" : "C#",
-                        "lvl" : 1
+                        "name" : "Python",
+                        "lvl" : 2
                     }
                 ],
                 "data" : [
+                    {
+                        "name" : "R",
+                        "lvl" : 3
+                    },
                     {
                         "name" : "SQL",
                         "lvl" : 2
