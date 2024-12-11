@@ -84,7 +84,7 @@ portfolio.addEventListener('click', (e) => {
                     elem.style.display = "block";
                 }
                 let contentfield = elem.lastElementChild;
-                let contentdata = data.portfolio[e.target.id.substring(4)][contentfield.id.substring(2)];
+                let contentdata = data.portfolio.projects[e.target.id.substring(4)][contentfield.id.substring(2)];
 
                 if (contentfield.id.substring(2) == "desc") {
                     let lang = document.getElementById('lang').textContent;

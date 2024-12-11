@@ -76,7 +76,7 @@
                 }
             },
             {
-                "date" : "2019 (6m)",
+                "date" : "2019",
                 "name" : {
                     "EN" : "Assistant student for the course *Formalisation for social and political sciences*.",
                     "FR" : "Etudiant assistant pour le cours *Formalisation pour les sciences sociales et politiques*"
@@ -142,79 +142,89 @@
             }
         }
     },
-    "portfolio" : [
-        {
-            "title" : "top_secret_project_3",
-            "type" : "back",
-            "tech" : [ "Python" ],
-            "desc" : {
-                "EN" : "Yet another top secret project soon to be revealed.",
-                "FR" : ""
+    "portfolio" : {
+        "tabs" : {
+            "EN" : [
+                "Name", "Technologies", "Description", "Link(s)"
+            ],
+            "FR" : [
+                "Nom", "Technologies", "Description", "Lien(s)"
+            ]
+        },
+        "projects" : [
+            {
+                "title" : "top_secret_project_3",
+                "type" : "back",
+                "tech" : [ "Python" ],
+                "desc" : {
+                    "EN" : "Yet another top secret project soon to be revealed.",
+                    "FR" : ""
+                },
+                "links" : {
+                    "github" : "",
+                    "i3" : ""
+                }
             },
-            "links" : {
-                "github" : "",
-                "i3" : ""
+            {
+                "title" : "top_secret_project_2",
+                "type" : "back",
+                "tech" : [ "CSharp" ],
+                "desc" : {
+                    "EN" : "Antother top secret project soon to be revealed.",
+                    "FR" : ""
+                },
+                "links" : {}
+            },
+            {
+                "title" : "top_secret_project_1",
+                "type" : "front",
+                "tech" : [ "HTML", "CSS", "JavaScript" ],
+                "desc" : {
+                    "EN" : "A top secret project soon to be revealed.",
+                    "FR" : ""
+                },
+                "links" : {}
+            },
+            {
+                "title" : "Portfolio",
+                "type" : "front",
+                "tech" : [ "HTML", "CSS", "JavaScript" ],
+                "desc" : {
+                    "EN" : "The wonderful website you're vieiwing.",
+                    "FR" : ""
+                },
+                "links" : {
+                    "github" : ""
+                }
+            },
+            {
+                "title" : "Table Tavern",
+                "type" : "back",
+                "tech" : [ "PHP", "Symfony" ],
+                "desc" : {
+                    "EN" : "Symfony project made at Interface3.",
+                    "FR" : ""
+                },
+                "links" : {
+                    "github" : "",
+                    "i3" : ""
+                }
+            },
+            {
+                "title" : "Carbon Quest",
+                "type" : "back",
+                "tech" : [ "PHP" ],
+                "desc" : {
+                    "EN" : "Hackaton project made in 3 days at Interface3.",
+                    "FR" : ""
+                },
+                "links" : {
+                    "github" : "",
+                    "i3" : ""
+                }
             }
-        },
-        {
-            "title" : "top_secret_project_2",
-            "type" : "back",
-            "tech" : [ "CSharp" ],
-            "desc" : {
-                "EN" : "Antother top secret project soon to be revealed.",
-                "FR" : ""
-            },
-            "links" : {}
-        },
-        {
-            "title" : "top_secret_project_1",
-            "type" : "front",
-            "tech" : [ "HTML", "CSS", "JavaScript" ],
-            "desc" : {
-                "EN" : "A top secret project soon to be revealed.",
-                "FR" : ""
-            },
-            "links" : {}
-        },
-        {
-            "title" : "Portfolio",
-            "type" : "front",
-            "tech" : [ "HTML", "CSS", "JavaScript" ],
-            "desc" : {
-                "EN" : "The wonderful website you're vieiwing.",
-                "FR" : ""
-            },
-            "links" : {
-                "github" : ""
-            }
-        },
-        {
-            "title" : "Table Tavern",
-            "type" : "back",
-            "tech" : [ "PHP", "Symfony" ],
-            "desc" : {
-                "EN" : "Symfony project made at Interface3.",
-                "FR" : ""
-            },
-            "links" : {
-                "github" : "",
-                "i3" : ""
-            }
-        },
-        {
-            "title" : "Carbon Quest",
-            "type" : "back",
-            "tech" : [ "PHP" ],
-            "desc" : {
-                "EN" : "Hackaton project made in 3 days at Interface3.",
-                "FR" : ""
-            },
-            "links" : {
-                "github" : "",
-                "i3" : ""
-            }
-        }
-    ],
+        ]
+    },
     "contact" : {
         "linkedIn" : "https://www.linkedin.com/in/melusine-christophe/",
         "GitHub" : "https://github.com/ThreeLeggedDuckling"
