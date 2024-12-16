@@ -106,24 +106,17 @@ nav {
     flex-direction: row;
 }
 
-nav p {
+nav p, nav a {
     padding: 7px;
     text-align: center;
 }
 
-nav p:hover {
+nav p:hover, nav a:hover {
     background-color: var(--orange1);
 }
 
 nav .space:hover {
     background-color: var(--pink1);
-}
-
-nav .dropped {
-    background-color: var(--pink1);
-    text-align: left;
-    border: 1px solid var(--orange1);
-    border-radius: 2px;
 }
 
 
@@ -158,7 +151,6 @@ dialog .space {
 }
 
 dialog header {
-    /* cursor: move; */
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -171,11 +163,11 @@ dialog main {
     height: 85%;
 
     display: flex;
-    /* justify-content: space-between; */
 }
 
 dialog footer {
     height: 10px;
+    margin-top: 5px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -197,12 +189,9 @@ dialog header h1 {
     flex-direction: column;
 }
 
-#resume_tabs {
-    display: flex;
-}
-
-#resume_tabs p {
-    border: 1px solid black;
+fieldset {
+    border: 1px dotted black;
+    padding: 7px;
 }
 
 /*  portfolio   */
@@ -214,27 +203,6 @@ dialog header h1 {
 #folders {
     box-sizing: border-box;
 }
-
-/* #subfolders {
-    display: none;
-} */
-
-/* #folders p:hover, #list p:hover {
-    background-color: #600d63b3;
-} */
-
-/* #infos {
-    flex-grow: 2;
-} */
-
-/* #infos>* {
-    display: none;
-} */
-
-/* #i_desc {
-    max-height: 50%;
-    overflow: scroll;
-} */
 
 .label {
     font-weight: bold;

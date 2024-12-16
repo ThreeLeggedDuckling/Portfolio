@@ -73,7 +73,7 @@ portfolio.addEventListener('click', (e) => {
     // click projet
     if (Array.from(projectList.children).includes(e.target))
     {
-        fetch("../content.json")
+        fetch("../assets/content/content.json")
         .then(res => res.json())
         .then(data =>  {
             if (window.innerWidth < 600) {

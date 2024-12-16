@@ -1,13 +1,3 @@
-/*  VERSION DYNAMIQUE    (pas finie)
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 600) {
-            console.log('enough :>> ', window.innerWidth);
-        } else {
-            console.log('too small :>> ', window.innerWidth);
-        }
-    })
-*/
-
 // variable drag
 let selected = null;
 let pointerX = 0;
@@ -27,8 +17,6 @@ function _move_elem(e) {
     if (selected !== null) {
         selected.style.left = (pointerX - elemX) + 'px';
         selected.style.top = (pointerY - elemY) + 'px';
-        // trouver comment empêcher redimension extrimité droite
-        // ... bypassed par taille prédéfinie
     }
 }
 

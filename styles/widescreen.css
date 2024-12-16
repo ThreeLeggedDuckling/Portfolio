@@ -39,7 +39,7 @@ dialog header {
 /*  portfolio     */
 
 #portfolio_window {
-    height: 440px;
+    min-height: 440px;
 }
 
 #subfolders {
