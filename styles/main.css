@@ -200,6 +200,14 @@ fieldset {
     border: 1px solid black;
 }
 
+#explorer div {
+    margin-left: 10px;
+}
+
+#detail * {
+    display: none;
+}
+
 #folders {
     box-sizing: border-box;
 }

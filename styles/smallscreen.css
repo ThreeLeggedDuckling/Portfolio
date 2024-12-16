@@ -10,6 +10,16 @@ dialog {
 
 #portfolio_window main {
     flex-direction: column;
+    min-height: 50vh;
+}
+
+#explorer {
+    min-height: 30vh;
+    max-height: 30vh;
+}
+
+#detail {
+    display: none;
 }
 
 #infos {

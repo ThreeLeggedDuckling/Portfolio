@@ -50,6 +50,15 @@ dialog header {
     background-color: var(--pink2a);
 }
 
+#explorer {
+    width: 30%;
+    min-height: 350px;
+}
+
+#detail {
+    width: 70%;
+}
+
 #infos {
     width: 50%;
 }
