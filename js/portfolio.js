@@ -73,9 +73,15 @@ portfolio.addEventListener('click', (e) => {
     // click projet
     if (Array.from(projectList.children).includes(e.target))
     {
+        let errorStatus = undefined;
         fetch("../content.json")
-        .then(res => res.json())
+        .then(res => {
+            errorStatus = "Récupération réponse";
+            console.log(res);            
+            return res.json();
+        })
         .then(data =>  {
+            errorStatus = "Traitement données";
             if (window.innerWidth < 600) {
                 infoDisplay.style.display = "block";
             }
@@ -106,6 +112,11 @@ portfolio.addEventListener('click', (e) => {
 
             }
 
+        })
+        .catch(error => {
+            console.log('ErrorStatus :>> ', errorStatus);
+            console.error(error);
+            
         })
     }
 
