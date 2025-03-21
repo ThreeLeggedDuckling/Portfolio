@@ -205,6 +205,11 @@ dialog header h1 {
     border: 1px solid black;
 }
 
+fieldset {
+    border: 1px dotted black;
+    padding: 7px;
+}
+
 /*  portfolio   */
 
 .panel {
