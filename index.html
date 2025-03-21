@@ -10,13 +10,19 @@
     <script src="scripts/main.js" defer></script>
     <script src="scripts/portfolio.js" defer></script>
 
-    <title>Mélusine Christophe's Portfolio</title>
+    <title>Mélusine Christophe</title>
 </head>
 <body>
 
     <nav>
-        <p id="about_nav" class="icon">About</p>
-        <p id="resume_nav" class="icon">Resume</p>
+        <p id="about_nav" class="icon">
+            <span class="EN">About</span>
+            <span class="FR">A propos</span>
+        </p>
+        <p id="resume_nav" class="icon">
+            <span class="EN">Resume</span>
+            <span class="FR">Expérience</span>
+        </p>
         <p id="portfolio_nav" class="icon">Portfolio</p>
         <p id="contact_nav" class="icon">Contact</p>
         <p class="space"></p>
@@ -27,7 +33,10 @@
         <header>
             <div class="squareCorner"></div>
             <p class="space"></p>
-            <h1>About</h1>
+            <h1>
+                <span class="EN">About</span>
+                <span class="FR">A Propos</span>
+            </h1>
             <p class="space"></p>
             <form method="dialog" class="closeForm">
                 <button class="close"></button>
@@ -36,13 +45,12 @@
         <main>
             <img src="./assets/img/ducky.png" alt="A cartoon of a yellow rubber duck" id="ducky">
             <div>
-                <p id="greeting"></p>
+                <p class="greeting EN"></p>
+                <p class="greeting FR"></p>
                 <p class="EN">
-                    HERE SOME ENGLISH
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt illum voluptatum doloribus. Eveniet rerum inventore dolore odio dolores facere eum, repellendus deleniti sit et earum, rem a sequi tempora non.
                 </p>
                 <p class="FR">
-                    ICI DU FRANCAIS
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt illum voluptatum doloribus. Eveniet rerum inventore dolore odio dolores facere eum, repellendus deleniti sit et earum, rem a sequi tempora non.
                 </p>
             </div>
@@ -56,7 +64,10 @@
         <header>
             <div class="squareCorner"></div>
             <p class="space"></p>
-            <h1>Resume</h1>
+            <h1>
+                <span class="EN">Resume</span>
+                <span class="FR">Expérience</span>
+            </h1>
             <p class="space"></p>
             <form method="dialog" class="closeForm">
                 <button class="close"></button>
@@ -65,18 +76,54 @@
         <main>
             <fieldset id="education">
                 <legend>Education</legend>
-
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ad enim eveniet a maiores eum commodi atque, quidem aliquid ducimus.
+                <div>
+                    date
+                    nom
+                    etablissement
+                </div>
+                <div>
+                    date
+                    nom
+                    etablissement
+                </div>
+                <div>
+                    date
+                    nom
+                    etablissement
+                </div>
+                <div>
+                    date
+                    nom
+                    etablissement
+                </div>
             </fieldset>
+
             <fieldset id="experience">
-                <legend>Experience</legend>
-
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, ipsa quidem praesentium commodi magnam numquam minima iusto cum quis quam?
+                <legend class="EN">Experience</legend>
+                <legend class="FR">Expérience</legend>
+                <div>
+                    date
+                    nom
+                    lieu
+                    description
+                </div>
+                <div>
+                    date
+                    nom
+                    lieu
+                    description
+                </div>
             </fieldset>
-            <fieldset id="skills">
-                <legend>Skills</legend>
 
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nobis qui eveniet illo molestiae veniam vel rem consequuntur deserunt numquam?
+            <fieldset id="skills">
+                <legend class="EN">Skills</legend>
+                <legend class="FR">Compétences</legend>
+                <fieldset id="hard">
+                    <legend>hard skills</legend>
+                </fieldset>
+                <fieldset id="soft">
+                    <legend>soft skills</legend>
+                </fieldset>
             </fieldset>
         </main>
         <footer>
@@ -96,8 +143,15 @@
         <main>
 
             <div id="explorer" class="panel">
-                <p id="e_root">> Projects</p>
+                <p id="e_root">
+                    <span class="EN">> Projects</span>
+                    <span class="FR">> Projets</span>
+                </p>
                 <div>
+                    <p id="e_csharp">> C#</p>
+                    <div>
+                        <p id="sansnom">(sans nom)</p>
+                    </div>
                     <p id="e_js">> JavaScript</p>
                     <div>
                         <p id="minesweeper">Minesweeper</p>
@@ -113,11 +167,13 @@
 
             <div id="detail" class="panel">
                 <div>
-                    <p class="label">Name</p>
+                    <p class="label EN">Name</p>
+                    <p class="label FR">Nom</p>
                     <p class="carbonquest">CarbonQuest</p>
                     <p class="tabletavern">Table Tavern</p>
                     <p class="myportfolio">Portfolio</p>
                     <p class="minesweeper">Minesweeper</p>
+                    <p class="sansnom">(sans nom)</p>
                 </div>
 
                 <div>
@@ -126,26 +182,41 @@
                     <p class="tabletavern">Symfony JavaScript</p>
                     <p class="myportfolio">HTML CSS JavaScript</p>
                     <p class="minesweeper">HTML CSS JavaScript</p>
+                    <p class="sansnom">C#</p>
                 </div>
 
                 <div>
                     <p class="label">Description</p>
                     <p class="carbonquest">
-                        Backend part of this project made in 3 days at Interface3. (better description coming soon)
+                        <span class="EN">Backend part of this project made in 3 days at Interface3. (better description coming soon)</span>
+                        <span class="FR">Partie backend de ce projet réalisé en 3 jours à Interface3. (meilleure description à venir)</span>
+                        
                     </p>
                     <p class="tabletavern">
-                        Symfony project made at Interface3. (better description coming soon)
+                        <span class="EN">Symfony project made at Interface3. (better description coming soon)</span>
+                        <span class="FR">Projet Symfony réalisé dans le cadre ma formation chez Interface3. (meilleure description à venir)</span>
+                        
                     </p>
                     <p class="myportfolio">
-                        My online resume, a.k.a. the website you're currently viewing. Made during my formation at Interface3, this is an ongoing work ment to showcase my projects.
+                        <span class="EN">My online resume, a.k.a. the website you're currently viewing. Made during my formation at Interface3, this is an ongoing work ment to showcase my projects.</span>
+                        <span class="FR">Mon cv en ligne, soit le site que vous êtes en train de consulter. Réalisé dans le cadre de ma formation à Interface3, ceci est un projet en cours de développement servant à présenter mes projets. (meilleure description à venir)</span>
+                        
                     </p>
                     <p class="minesweeper">
-                        How can you have a desktop whitout a Minsweeper game? (better description coming soon)
+                        <span class="EN">How can you have a desktop whitout a Minsweeper game? (better description coming soon)</span>
+                        <span class="FR">Comment pourrait-on avoir un bureau sans démineur? (meilleure description à venir)</span>
+                        
+                    </p>
+                    <p class="sansnom">
+                        <span class="EN">(some description coming soon)</span>
+                        <span class="FR">(très bientôt, une description)</span>
+                        
                     </p>
                 </div>
 
                 <div>
-                    <p class="label">Links and Preview</p>
+                    <p class="label EN">Links and Preview</p>
+                    <p class="label FR">Liens et Aperçu</p>
                     <a href="" target="_blank" class="carbonquest"></a>
                     <a href="" target="_blank" class="tabletavern"></a>
                     <a href="" target="_blank" class="myportfolio"></a>
@@ -180,14 +251,20 @@
         <header>
             <div class="squareCorner"></div>
             <p class="space"></p>
-            <h1>Contact</h1>
+            <h1>
+                <span class="EN">Contact</span>
+                <span class="FR">Me Contacter</span>
+            </h1>
             <p class="space"></p>
             <form method="dialog" class="closeForm">
                 <button class="close"></button>
             </form>
         </header>
         <main>
-            <h2>Ways to reach me</h2>
+            <h2>
+                <span class="EN">Ways to reach me</span>
+                <span class="FR">Comment me joindre</span>
+            </h2>
             <div id="links">
                 <a href="https://www.linkedin.com/in/melusine-christophe/" target="_blank">
                     <img src="assets/img/logo-linkedin.svg" alt="" class="logo">

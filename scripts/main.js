@@ -6,6 +6,7 @@ let dragParam = {
     elemY: 0
 }
 let openStack = [];     // open windows stack
+let langSwitch = document.getElementById('lang');
 
 
 /*  WINDOW STACK MANAGEMENT  */
@@ -119,32 +120,35 @@ for (let openWindow of document.getElementsByTagName('dialog')) {
 
 
 /*  message accueil */
-let langBtn = document.getElementById('lang');
-let time = new Date().getHours();
-if (time < 6 || time > 21) {
-    if (langBtn.textContent == "EN") greeting.textContent = 'Greetings, fellow nighthowl.';
-    else greeting.textContent = 'Salutations, être nocturne.';
-} else if (time < 12) {
-    if (langBtn.textContent == "EN") greeting.textContent = 'Hello, good morning!';
-    else greeting.textContent = 'Bien le bonjour!';
-} else if (time < 16) {
-    if (langBtn.textContent == "EN") greeting.textContent = 'Hello, good afternoon!';
-    else greeting.textContent = 'Bien le bonjour!';
-} else {
-    if (langBtn.textContent == "EN") greeting.textContent = 'Hi, good evening!';
-    else greeting.textContent = 'Bien le bonsoir!';
+
+
+for (let elem of document.getElementsByClassName('greeting')) {
+    let currentTime = new Date().getHours();
+    
+    if (currentTime < 6 || currentTime > 21) elem.textContent = elem.classList.contains('EN') ? "Greetings, fellow nighthowl." : "Salutations, être nocturne.";
+    else if (currentTime < 12) elem.textContent = elem.classList.contains('EN') ? "Hello, good morning!" : "Bien le bonjour!";
+    else if (currentTime < 16) elem.textContent = elem.classList.contains('EN') ? "Hello, good afternoon!" : "Bien le bonjour!";
+    else elem.textContent = elem.classList.contains('EN') ? "Hi, good evening!" : "Bien le bonsoir!";
 }
 
 /*  gestion langues  */
-function displayLang() {
+function toggleDisplayLang() {
+
     for (const elem of document.querySelectorAll(".EN, .FR")) {
-        if (elem.classList.contains(langBtn.textContent)) elem.style.display = "none";
+        if (elem.classList.contains(langSwitch.textContent)) elem.style.display = "none";
         else elem.style.display = "block";
     }
 }
-displayLang();
+toggleDisplayLang();
 
-langBtn.addEventListener('click', () => {
-    langBtn.textContent = langBtn.textContent == "EN" ? "FR" : "EN";
-    displayLang();
+langSwitch.addEventListener('click', () => {
+    langSwitch.textContent = langSwitch.textContent == "EN" ? "FR" : "EN";
+    toggleDisplayLang();
 })
+
+
+
+
+
+// par defaut about ouvert
+document.getElementById("about_window").show();
