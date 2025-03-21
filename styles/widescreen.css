@@ -39,7 +39,7 @@ dialog header {
 /*  portfolio     */
 
 #portfolio_window {
-    height: 440px;
+    min-height: 440px;
 }
 
 #subfolders {
@@ -48,6 +48,15 @@ dialog header {
 
 #folders p:hover, #list p:hover {
     background-color: var(--pink2a);
+}
+
+#explorer {
+    width: 30%;
+    min-height: 350px;
+}
+
+#detail {
+    width: 70%;
 }
 
 #infos {

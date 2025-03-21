@@ -4,42 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/smallscreen.css" media="screen and (max-width: 600px)">
-    <link rel="stylesheet" href="styles/widescreen.css" media="screen and (min-width: 600px)">
-    <script src="scripts/main.js" defer></script>
-    <script src="scripts/windowsBehavior.js" defer></script>
-    <script src="scripts/portfolio.js" defer></script>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/smallscreen.css" media="screen and (max-width: 600px)">
+    <link rel="stylesheet" href="../styles/widescreen.css" media="screen and (min-width: 600px)">
+    <script src="../scripts/main.js" defer></script>
+    <script src="../scripts/windowsBehavior.js" defer></script>
+    <script src="../scripts/portfolio.js" defer></script>
 
-    <title>Mélusine Christophe's Portfolio</title>
+    <title>Portfolio Mélusine Christophe</title>
 </head>
 <body>
 
     <nav>
-        <p id="about_nav" class="icon">About</p>
-        <p id="resume_nav" class="icon">Resume</p>
+        <p id="about_nav" class="icon">A propos</p>
+        <p id="resume_nav" class="icon">Parcours</p>
         <p id="portfolio_nav" class="icon">Portfolio</p>
         <p id="contact_nav" class="icon">Contact</p>
         <p class="space"></p>
-        <a href="./fr/fr.html" id="lang">FR</a>
+        <a href="../index.html">EN</a>
     </nav>
     
     <dialog id="about_window" class="medium">
         <header>
             <div class="squareCorner"></div>
             <p class="space"></p>
-            <h1>About</h1>
+            <h1>A propos</h1>
             <p class="space"></p>
             <form method="dialog" class="closeForm">
                 <button class="close"></button>
             </form>
         </header>
         <main>
-            <img src="./assets/img/ducky.png" alt="A cartoon of a yellow rubber duck" id="ducky">
+            <img src="../assets/img/ducky.png" alt="A cartoon of a yellow rubber duck" id="ducky">
             <div>
-                <p id="greeting"></p>
-                <p class="EN">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt illum voluptatum doloribus. Eveniet rerum inventore dolore odio dolores facere eum, repellendus deleniti sit et earum, rem a sequi tempora non.
+                <p id="greeting" class="FR"></p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem labore est voluptas! Qui amet expedita esse temporibus itaque porro, ex delectus numquam eius voluptatum commodi voluptate autem voluptatem consectetur nostrum iure vero magni et. Eius incidunt numquam libero quibusdam nobis.
                 </p>
             </div>
         </main>
@@ -47,12 +47,11 @@
         </footer>
     </dialog>
 
-    <!-- fenêtre cv -->
     <dialog id="resume_window" class="large">
         <header>
             <div class="squareCorner"></div>
             <p class="space"></p>
-            <h1>Resume</h1>
+            <h1>Parcours</h1>
             <p class="space"></p>
             <form method="dialog" class="closeForm">
                 <button class="close"></button>
@@ -60,17 +59,17 @@
         </header>
         <main>
             <fieldset id="education">
-                <legend>Education</legend>
+                <legend>Formation</legend>
 
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ad enim eveniet a maiores eum commodi atque, quidem aliquid ducimus.
             </fieldset>
             <fieldset id="experience">
-                <legend>Experience</legend>
+                <legend>Expérience</legend>
 
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, ipsa quidem praesentium commodi magnam numquam minima iusto cum quis quam?
             </fieldset>
             <fieldset id="skills">
-                <legend>Skills</legend>
+                <legend>Compétences</legend>
 
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nobis qui eveniet illo molestiae veniam vel rem consequuntur deserunt numquam?
             </fieldset>
@@ -92,7 +91,7 @@
         <main>
 
             <div id="explorer" class="panel">
-                <p id="e_root">> Projects</p>
+                <p id="e_root">> Projets</p>
                 <div>
                     <p id="e_js">> JavaScript</p>
                     <div>
@@ -109,7 +108,7 @@
 
             <div id="detail" class="panel">
                 <div>
-                    <p class="label">Name</p>
+                    <p class="label">Nom</p>
                     <p class="carbonquest">CarbonQuest</p>
                     <p class="tabletavern">Table Tavern</p>
                     <p class="myportfolio">Portfolio</p>
@@ -127,21 +126,21 @@
                 <div>
                     <p class="label">Description</p>
                     <p class="carbonquest">
-                        Backend part of this project made in 3 days at Interface3. (better description coming soon)
+                        Partie backend de ce projet réalisé en 3 jours dans le cadre de ma formation à Interface3. (meilleure description très prochainement)
                     </p>
                     <p class="tabletavern">
-                        Symfony project made at Interface3. (better description coming soon)
+                        Projet Symfony réalisé dans le cadre de ma formation à Interface3. (meilleure description très prochainement)
                     </p>
                     <p class="myportfolio">
-                        My online resume, a.k.a. the website you're currently viewing. Made during my formation at Interface3, this is an ongoing work ment to showcase my projects.
+                        Mon cv en ligne, soit le site sur lequel vous êtes actuellement. Réalisé dans le cadre de ma formation à Interface3, ce projet en constante évolution.
                     </p>
                     <p class="minesweeper">
-                        How can you have a desktop whitout a Minsweeper game? (better description coming soon)
+                        How can you have a desktop whitout a Minsweeper game? (meilleure description très prochainement)
                     </p>
                 </div>
 
                 <div>
-                    <p class="label">Links and Preview</p>
+                    <p class="label">Liens et démo</p>
                     <a href="" target="_blank" class="carbonquest"></a>
                     <a href="" target="_blank" class="tabletavern"></a>
                     <a href="" target="_blank" class="myportfolio"></a>
@@ -149,6 +148,7 @@
                 </div>
 
             </div>
+
         </main>
         <footer>
         </footer>
@@ -183,13 +183,13 @@
             </form>
         </header>
         <main>
-            <h2>Ways to reach me</h2>
+            <h2>Me contacter</h2>
             <div id="links">
                 <a href="https://www.linkedin.com/in/melusine-christophe/" target="_blank">
-                    <img src="assets/img/logo-linkedin.svg" alt="" class="logo">
+                    <img src="../assets/img/logo-linkedin.svg" alt="" class="logo">
                 </a>
                 <a href="https://github.com/ThreeLeggedDuckling" target="_blank">
-                    <img src="assets/img/logo-github.svg" alt="" class="logo">
+                    <img src="../assets/img/logo-github.svg" alt="" class="logo">
                 </a>
             </div>
             <!-- form mailto -->

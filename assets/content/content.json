@@ -8,11 +8,11 @@
         ]
     },
     "about" : {
-        "EN" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vel beatae aspernatur esse exercitationem temporibus sed voluptas animi praesentium necessitatibus!",
-        "FR" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio praesentium exercitationem culpa sint, accusantium eum in! Adipisci sequi temporibus eum!"
+        "EN" : "",
+        "FR" : ""
     },
     "resume" : {
-        "tabs" : {
+        "sections" : {
             "EN" : [
                 "Education", "Experience", "Skills"
             ],
@@ -152,39 +152,6 @@
             ]
         },
         "projects" : [
-            {
-                "title" : "top_secret_project_3",
-                "type" : "back",
-                "tech" : [ "Python" ],
-                "desc" : {
-                    "EN" : "Yet another top secret project soon to be revealed.",
-                    "FR" : ""
-                },
-                "links" : {
-                    "github" : "",
-                    "i3" : ""
-                }
-            },
-            {
-                "title" : "top_secret_project_2",
-                "type" : "back",
-                "tech" : [ "CSharp" ],
-                "desc" : {
-                    "EN" : "Antother top secret project soon to be revealed.",
-                    "FR" : ""
-                },
-                "links" : {}
-            },
-            {
-                "title" : "top_secret_project_1",
-                "type" : "front",
-                "tech" : [ "HTML", "CSS", "JavaScript" ],
-                "desc" : {
-                    "EN" : "A top secret project soon to be revealed.",
-                    "FR" : ""
-                },
-                "links" : {}
-            },
             {
                 "title" : "Portfolio",
                 "type" : "front",
