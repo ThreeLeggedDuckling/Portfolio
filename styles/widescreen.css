@@ -4,10 +4,6 @@
 
 /*  classes     */
 
-.foreground {
-    z-index: 1000;
-}
-
 .small {
     width: 300px;
 }
