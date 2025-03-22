@@ -65,16 +65,14 @@ for (const elem of document.getElementsByClassName('icon')) {
         // get corresponding window
         let selectedWindow = document.getElementById(elem.id.replace(/nav|icon/, 'window'));
 
+        // close previous window on small screen
+        if (window.innerWidth <= 600) {
+            if (openStack.length > 0) openStack[0].close();
+        }
+        
         // update stack and move the window foreground
         updateWindowsStack(selectedWindow);
         setZIndex();
-
-        // close previous windows on small screen
-        if (window.innerWidth <= 600) {
-            while (openStack.length > 1) {
-                openStack.pop().close();
-            }
-        }
 
         // open window
         selectedWindow.show();
@@ -94,61 +92,45 @@ for (let openWindow of document.getElementsByTagName('dialog')) {
 
     // remove from stack on close
     openWindow.addEventListener('close', () => {
-        openStack.splice(openStack.indexOf(openWindow), 1);
+        if(openStack.includes(openWindow)) openStack.splice(openStack.indexOf(openWindow), 1);
     })
 }
 
 
+/*  DISPLAY LANGUAGE  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*  message accueil */
-
-
-for (let elem of document.getElementsByClassName('greeting')) {
-    let currentTime = new Date().getHours();
-    
-    if (currentTime < 6 || currentTime > 21) elem.textContent = elem.classList.contains('EN') ? "Greetings, fellow nighthowl." : "Salutations, être nocturne.";
-    else if (currentTime < 12) elem.textContent = elem.classList.contains('EN') ? "Hello, good morning!" : "Bien le bonjour!";
-    else if (currentTime < 16) elem.textContent = elem.classList.contains('EN') ? "Hello, good afternoon!" : "Bien le bonjour!";
-    else elem.textContent = elem.classList.contains('EN') ? "Hi, good evening!" : "Bien le bonsoir!";
-}
-
-/*  gestion langues  */
+// toggle visibility of elements
 function toggleDisplayLang() {
-
     for (const elem of document.querySelectorAll(".EN, .FR")) {
         if (elem.classList.contains(langSwitch.textContent)) elem.style.display = "none";
         else elem.style.display = "block";
     }
 }
-toggleDisplayLang();
 
+// switch display language (meant to be used with json source file)
 langSwitch.addEventListener('click', () => {
     langSwitch.textContent = langSwitch.textContent == "EN" ? "FR" : "EN";
     toggleDisplayLang();
 })
 
 
+/*  MISC  */
+
+// greeting message depending on current time
+for (let elem of document.querySelectorAll("[id^='greeting']")) {
+    let currentTime = new Date().getHours();
+    if (currentTime < 6 || currentTime > 21) elem.textContent = elem.id.endsWith('EN') ? "Greetings, fellow nighthowl," : "Salutations, être nocturne,";
+    else if (currentTime < 12) elem.textContent = elem.id.endsWith('EN') ? "Hello, good morning," : "Bien le bonjour,";
+    else if (currentTime < 17) elem.textContent = elem.id.endsWith('EN') ? "Hello, good afternoon," : "Bien le bonjour,";
+    else elem.textContent = elem.id.endsWith('EN') ? "Hi, good evening," : "Bien le bonsoir,";
+}
 
 
+/*  ON LOAD  */
 
-// par defaut about ouvert
+// initiate display language
+toggleDisplayLang();
+
+// open About window on load
+updateWindowsStack(document.getElementById("about_window"));
 document.getElementById("about_window").show();

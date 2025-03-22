@@ -1,4 +1,4 @@
-const folders = [e_root, e_js, e_php];
+const folders = [e_root,e_csharp, e_js, e_php];
 let lastSeen;
 let lastInteract;
 

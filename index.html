@@ -45,21 +45,34 @@
         <main>
             <img src="./assets/img/ducky.png" alt="A cartoon of a yellow rubber duck" id="ducky">
             <div>
-                <p class="greeting EN"></p>
-                <p class="greeting FR"></p>
-                <p class="EN">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt illum voluptatum doloribus. Eveniet rerum inventore dolore odio dolores facere eum, repellendus deleniti sit et earum, rem a sequi tempora non.
-                </p>
-                <p class="FR">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt illum voluptatum doloribus. Eveniet rerum inventore dolore odio dolores facere eum, repellendus deleniti sit et earum, rem a sequi tempora non.
-                </p>
+                <div class="EN">
+                    <p>
+                        <span id="greetingEN"></span>I'm Mélusine.
+                    </p>
+                    <p>
+                        I'm a junior backend developer specialising in C# and PHP. This website is meant to emulate a desktop, feel free to close this window and have a look at the different sections to learn more about me.
+                    </p>
+                    <p class="lookingfor">
+                        I'm looking for a 2 months unpaid internship as a backend developer between April and June 2025.
+                    </p>
+                </div>
+                <div class="FR">
+                    <p>
+                        <span id="greetingFR"></span>moi c'est Mélusine.
+                    </p>
+                    <p>
+                        Je suis une développeuse backend junior orientée C# et PHP. Ce site émule le comportement d'un bureau d'ordinateur, libre à vous de fermer cette fenêtre et d'explorer pour en apprendre plus à mon sujet.
+                    </p>
+                    <p class="lookingfor">
+                        Je suis à la recherche d'un stage non rémunéré de 2 mois en tant que développeur backend pour la période d'avril à juin 2025.
+                    </p>
+                </div>
             </div>
         </main>
         <footer>
         </footer>
     </dialog>
 
-    <!-- fenêtre cv -->
     <dialog id="resume_window" class="large">
         <header>
             <div class="squareCorner"></div>
@@ -74,57 +87,113 @@
             </form>
         </header>
         <main>
-            <fieldset id="education">
-                <legend>Education</legend>
-                <div>
-                    date
-                    nom
-                    etablissement
-                </div>
-                <div>
-                    date
-                    nom
-                    etablissement
-                </div>
-                <div>
-                    date
-                    nom
-                    etablissement
-                </div>
-                <div>
-                    date
-                    nom
-                    etablissement
-                </div>
-            </fieldset>
-
-            <fieldset id="experience">
-                <legend class="EN">Experience</legend>
-                <legend class="FR">Expérience</legend>
-                <div>
-                    date
-                    nom
-                    lieu
-                    description
-                </div>
-                <div>
-                    date
-                    nom
-                    lieu
-                    description
-                </div>
-            </fieldset>
-
-            <fieldset id="skills">
-                <legend class="EN">Skills</legend>
-                <legend class="FR">Compétences</legend>
-                <fieldset id="hard">
-                    <legend>hard skills</legend>
+            <div id="resume_tabs">
+                <p id="tab_education">Education</p>
+                <p id="tab_experience">
+                    <span class="EN">Work Experience</span>
+                    <span class="FR">Expérience professionnelle</span>
+                </p>
+                <p id="tab_skills">
+                    <span class="EN">Skills</span>
+                    <span class="FR">Compétences</span>
+                </p>
+            </div>
+            <div id="panel_education">
+                <fieldset>
+                    <legend>Web Application Developer</legend>
+                    2024 - 2025
+                    Interface3, Bruxelles
+                    (description)
                 </fieldset>
-                <fieldset id="soft">
-                    <legend>soft skills</legend>
+                <fieldset>
+                    <legend class="EN">IT careers orientation module</legend>
+                    <legend class="FR">Module d'orientation aux métiers de l'informatique</legend>
+                    2023
+                    Interface3, Bruxelles
+                    (description)
                 </fieldset>
-            </fieldset>
+                <fieldset>
+                    <legend class="EN">Criminology MA</legend>
+                    <legend class="FR">Master en Criminologie</legend>
+                    2019 - 2021
+                    Université Libre de Bruxelles, Bruxelles
+                </fieldset>
+                <fieldset>
+                    <legend class="EN">Human and Social Sciences BA</legend>
+                    <legend class="FR">Bachelier en Sciences Humaines et Sociales</legend>
+                    2020
+                    Université Libre de Bruxelles, Bruxelles
+                </fieldset>
+            </div>
+            <div id="panel_experience">
+                <fieldset>
+                    <legend class="EN">Student teaching assistant</legend>
+                    <legend class="FR">Etudiant-assistant</legend>
+                    <p class="EN">for the course of Social Network Analysis</p>
+                    <p class="FR">pour le cours de Social Network Analysis</p>
+                    <p class="EN">feb 2021 - june 2021</p>
+                    <p class="FR">fév 2021 - juin 2021</p>
+                    <p>Université Libre de Bruxelles, Bruxelles</p>
+                    <ul>
+                        <li class="EN">educational support R</li>
+                        <li class="FR">soutien pédagogique en R</li>
+                        <li class="EN">review of end-of-year projects</li>
+                        <li class="FR">évaluation des projets de fin</li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend class="EN">Student teaching assistant</legend>
+                    <legend class="FR">Etudiant-assistant</legend>
+                    <p class="EN">for the course of Formalisation pour les sciences sociales</p>
+                    <p class="FR">pour le cours de Social Network Analysis</p>
+                    <p class="EN">sept 2019 - dec 2019</p>
+                    <p class="FR">sept 2019 - déc 2019</p>
+                    <p>Université Libre de Bruxelles, Bruxelles</p>
+                    <ul>
+                        <li class="EN">educational support in algebra and formal logic</li>
+                        <li class="FR">soutien pédagogique en algèbre et en logique formelle</li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div id="panel_skills">
+                <fieldset>
+                    <legend class="EN">Hard Skills</legend>
+                    <legend class="FR">Compétences</legend>
+                    <p>Backend</p>
+                    <ul>
+                        <li>ASP.NET</li>
+                        <li>C#</li>
+                        <li>NodeJS</li>
+                        <li>PHP</li>
+                        <li>Python</li>
+                        <li>Symfony</li>
+                    </ul>
+                    <p>Frontend</p>
+                    <ul>
+                        <li>Angular</li>
+                        <li>CSS3</li>
+                        <li>HTML5</li>
+                        <li>JavaScipt</li>
+                        <li>PhaserJS</li>
+                        <li>XML</li>
+                    </ul>
+                    <p class="EN">Database</p>
+                    <p class="FR">Base de données</p>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>MS SQL Server</li>
+                        <li>SQL</li>
+                    </ul>
+                    <p class="EN">Tools</p>
+                    <p class="FR">Outils</p>
+                    <ul>
+                        <li>Figma</li>
+                        <li>Git</li>
+                        <li>Visual Studio</li>
+                        <li>VS Code</li>
+                    </ul>
+                </fieldset>
+            </div>
         </main>
         <footer>
         </footer>
