@@ -60,7 +60,7 @@ function drag() {
 /*  WINDOW BEHAVIOUR  */
 
 // window opening
-for (const elem of document.getElementsByClassName('icon')) {
+for (const elem of document.getElementsByClassName('windowTrigger')) {
     elem.addEventListener('click', () => {
         // get corresponding window
         let selectedWindow = document.getElementById(elem.id.replace(/nav|icon/, 'window'));

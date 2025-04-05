@@ -40,25 +40,15 @@ a, a:visited {
     text-decoration: none;
 }
 
+fieldset {
+    border: 1px dotted black;
+    padding: 7px;
+}
+
 /*  classes     */
 
 .space {
     flex-grow: 2;
-}
-
-.drop {
-    position: relative;
-    display: inline-block;
-    background-color: inherit;
-}
-
-.dropped {
-    display: none;
-    position: absolute;
-}
-
-.drop:hover .dropped {
-    display: block;
 }
 
 .closeForm, .squareCorner {
@@ -90,6 +80,10 @@ a, a:visited {
 
 .selectedDisplay {
     background-color: var(--pink2a);
+}
+
+.label {
+    font-weight: bold;
 }
 
 
@@ -190,7 +184,6 @@ dialog main>* {
 }
 
 #ducky {
-    width: 40px;
     height: 40px;
     background-color: #ffffff80;
     border-radius: 50%;
@@ -208,15 +201,42 @@ dialog main>* {
     flex-direction: column;
 }
 
-fieldset {
-    border: 1px dotted black;
-    padding: 7px;
+#resume_tabs {
+    flex-direction: row;
 }
 
-fieldset {
-    border: 1px dotted black;
-    padding: 7px;
+#resume_tabs p {
+    border: 1px solid black;
+    display: inline-block;
+    margin: 0;
 }
+
+#resume_tabs span {
+    margin: 0;
+    padding: 0;
+}
+
+.resume_panel {
+    margin-bottom: 20px;
+    max-height: 90%;
+    overflow: scroll;
+}
+
+.resume_panel fieldset {
+    margin-top: 10px;
+}
+
+.resume_panel fieldset > div {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin: 5px;
+    display: flex;
+    align-items: flex-start;
+}
+
+#exp_panel, #skills_panel {
+    display: none;
+}
+
 
 /*  portfolio   */
 
@@ -234,10 +254,6 @@ fieldset {
 
 #folders {
     box-sizing: border-box;
-}
-
-.label {
-    font-weight: bold;
 }
 
 

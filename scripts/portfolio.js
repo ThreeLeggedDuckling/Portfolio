@@ -1,25 +1,24 @@
-const folders = [e_root,e_csharp, e_js, e_php];
-let lastSeen;
-let lastInteract;
+const pFolders = [e_root,e_csharp, e_js, e_php];
+let pLastSeen;
 
 portfolio_window.addEventListener('click', (e) => {
     // comportement dossiers
-    if (folders.includes(e.target)) {
+    if (pFolders.includes(e.target)) {
         let folderContent = e.target.nextElementSibling;
         let visibility = folderContent.style.display;
         folderContent.style.display = (visibility == "" || visibility == "block") ? "none" : "block";
     }
 
     // affichage détail
-    if (!folders.includes(e.target) && Array.from(explorer.getElementsByTagName('p')).includes(e.target)) {
+    if (!pFolders.includes(e.target) && Array.from(explorer.getElementsByTagName('p')).includes(e.target)) {
         if (window.innerWidth < 600) detail.style.display = "block";
         for (const elem of detail.children) {
             elem.style.display = "block";
             elem.firstElementChild.style.display = "block";
         }
 
-        if (typeof lastSeen !== "undefined") {
-            for (const elem of document.getElementsByClassName(lastSeen)) {
+        if (typeof pLastSeen !== "undefined") {
+            for (const elem of document.getElementsByClassName(pLastSeen)) {
                 elem.style.display = "none";
             }
         }
@@ -27,7 +26,7 @@ portfolio_window.addEventListener('click', (e) => {
             elem.style.display = "block";
         }
 
-        lastSeen = e.target.id;
+        pLastSeen = e.target.id;
     }
 
     // reset lors fermeture fenêtre

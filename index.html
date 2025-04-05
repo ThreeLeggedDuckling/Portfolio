@@ -9,25 +9,50 @@
     <link rel="stylesheet" href="styles/widescreen.css" media="screen and (min-width: 600px)">
     <script src="scripts/main.js" defer></script>
     <script src="scripts/portfolio.js" defer></script>
+    <script src="scripts/resume.js" defer></script>
 
     <title>Mélusine Christophe</title>
 </head>
 <body>
 
     <nav>
-        <p id="about_nav" class="icon">
+        <p id="about_nav" class="windowTrigger">
             <span class="EN">About</span>
             <span class="FR">A propos</span>
         </p>
-        <p id="resume_nav" class="icon">
+        <p id="resume_nav" class="windowTrigger">
             <span class="EN">Resume</span>
             <span class="FR">Expérience</span>
         </p>
-        <p id="portfolio_nav" class="icon">Portfolio</p>
-        <p id="contact_nav" class="icon">Contact</p>
+        <p id="portfolio_nav" class="windowTrigger">Portfolio</p>
+        <p id="contact_nav" class="windowTrigger">Contact</p>
         <p class="space"></p>
         <p id="lang">FR</p>
     </nav>
+
+    <!-- icônes du bureau -->
+    <div id="about" class="desktopIcon">
+        <img src="./assets/img/ducky.png" id="about_icon" class="icon windowTrigger">
+        <p class="iconTxt">
+            <span class="EN">about</span>
+            <span class="FR">a_propos</span>
+        </p>
+    </div>
+    <div id="resume" class="desktopIcon">
+        <img src="./assets/img/file.png" id="resume_icon" class="icon windowTrigger">
+        <p class="iconTxt">
+            <span class="EN">resume</span>
+            <span class="FR">experience</span>
+        </p>
+    </div>
+    <div id="portfolio" class="desktopIcon">
+        <img src="./assets/img/folder.png" id="portfolio_icon" class="icon windowTrigger">
+        <p class="iconTxt">portfolio</p>
+    </div>
+    <div id="contact" class="desktopIcon">
+        <img src="./assets/img/mail.png" id="contact_icon" class="icon windowTrigger">
+        <p class="iconTxt">contact</p>
+    </div>
     
     <dialog id="about_window" class="medium">
         <header>
@@ -88,110 +113,195 @@
         </header>
         <main>
             <div id="resume_tabs">
-                <p id="tab_education">Education</p>
-                <p id="tab_experience">
+                <p id="edu_tab">Education</p>
+                <p id="exp_tab">
                     <span class="EN">Work Experience</span>
                     <span class="FR">Expérience professionnelle</span>
                 </p>
-                <p id="tab_skills">
+                <p id="skills_tab">
                     <span class="EN">Skills</span>
                     <span class="FR">Compétences</span>
                 </p>
             </div>
-            <div id="panel_education">
+            <div id="edu_panel" class="resume_panel">
                 <fieldset>
-                    <legend>Web Application Developer</legend>
-                    2024 - 2025
-                    Interface3, Bruxelles
-                    (description)
+                    <legend class="EN">Programming</legend>
+                    <legend class="FR">Programmation</legend>
+                    <div id="wad">
+                        <input type="checkbox" disabled>
+                        <div>
+                            <p>Web Application Developer</p>
+                            <p>2024 - 2025</p>
+                            <p>Interface3, Bruxelles</p>
+                            <p>
+                                <span class="EN">Qualifying training in fullstack development.</span>
+                                <span class="FR">Formation qualifiante en développement fullstack.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="omi">
+                        <input type="checkbox" disabled checked>
+                        <div>
+                            <p>
+                                <span class="EN">Orientation Module for IT Careers</span>
+                                <span class="FR">Module d'orientation aux métiers de l'informatique</span>
+                            </p>
+                            <p>sept 2023 - oct 2023</p>
+                            <p>Interface3, Bruxelles</p>
+                            <p>
+                                <span class="EN">5 week introductory module to different branches of IT, especially network administration and front-end development.</span>
+                                <span class="FR">Module de 5 semaine d'introduction à différentes branches de l'informatique, en particulier l'administration de réseaux et au développement frontend.</span>
+                            </p>
+                        </div>
+                    </div>
                 </fieldset>
                 <fieldset>
-                    <legend class="EN">IT careers orientation module</legend>
-                    <legend class="FR">Module d'orientation aux métiers de l'informatique</legend>
-                    2023
-                    Interface3, Bruxelles
-                    (description)
-                </fieldset>
-                <fieldset>
-                    <legend class="EN">Criminology MA</legend>
-                    <legend class="FR">Master en Criminologie</legend>
-                    2019 - 2021
-                    Université Libre de Bruxelles, Bruxelles
-                </fieldset>
-                <fieldset>
-                    <legend class="EN">Human and Social Sciences BA</legend>
-                    <legend class="FR">Bachelier en Sciences Humaines et Sociales</legend>
-                    2020
-                    Université Libre de Bruxelles, Bruxelles
+                    <legend class="EN">University</legend>
+                    <legend class="FR">Université</legend>
+                    <div id="crim">
+                        <input type="checkbox" disabled>
+                        <div>
+                            <p>
+                                <span class="EN">Master in Criminology</span>
+                                <span class="FR">Master en Criminologie</span>
+                            </p>
+                            <p>2019 - 2021</p>
+                            <p>Université Libre de Bruxelles, Bruxelles</p>
+                        </div>
+                    </div>
+                    <div id="shum">
+                        <input type="checkbox" disabled checked>
+                        <div>
+                            <p>
+                                <span class="EN">Bachelor in Human and Social Sciences</span>
+                                <span class="FR">Bachelier en Sciences Humaines et Sociales</span>
+                            </p>
+                            <p>2020</p>
+                            <p>Université Libre de Bruxelles, Bruxelles</p>
+                        </div>
+                    </div>
                 </fieldset>
             </div>
-            <div id="panel_experience">
+            <div id="exp_panel" class="resume_panel">
                 <fieldset>
-                    <legend class="EN">Student teaching assistant</legend>
-                    <legend class="FR">Etudiant-assistant</legend>
-                    <p class="EN">for the course of Social Network Analysis</p>
-                    <p class="FR">pour le cours de Social Network Analysis</p>
-                    <p class="EN">feb 2021 - june 2021</p>
-                    <p class="FR">fév 2021 - juin 2021</p>
-                    <p>Université Libre de Bruxelles, Bruxelles</p>
-                    <ul>
-                        <li class="EN">educational support R</li>
-                        <li class="FR">soutien pédagogique en R</li>
-                        <li class="EN">review of end-of-year projects</li>
-                        <li class="FR">évaluation des projets de fin</li>
-                    </ul>
-                </fieldset>
-                <fieldset>
-                    <legend class="EN">Student teaching assistant</legend>
-                    <legend class="FR">Etudiant-assistant</legend>
-                    <p class="EN">for the course of Formalisation pour les sciences sociales</p>
-                    <p class="FR">pour le cours de Social Network Analysis</p>
-                    <p class="EN">sept 2019 - dec 2019</p>
-                    <p class="FR">sept 2019 - déc 2019</p>
-                    <p>Université Libre de Bruxelles, Bruxelles</p>
-                    <ul>
-                        <li class="EN">educational support in algebra and formal logic</li>
-                        <li class="FR">soutien pédagogique en algèbre et en logique formelle</li>
-                    </ul>
+                    <legend class="EN">Student Jobs</legend>
+                    <legend class="FR">Jobs etudiants</legend>
+                    <div>
+                        <input type="checkbox" disabled checked>
+                        <div id="sna">
+                            <p>
+                                <span class="EN">Student teaching assistant for the Social Network Analysis course</span>
+                                <span class="FR">Etudiant-assistant pour le cours de Social Network Analysis</span>
+                            </p>
+                            <p>
+                                <span class="EN">feb 2021 - june 2021</span>
+                                <span class="FR">fév 2021 - juin 2021</span>
+                            </p>
+                            <p>Université Libre de Bruxelles, Bruxelles</p>
+                            <ul>
+                                <li>
+                                    <span class="EN">educational support in R</span>
+                                    <span class="FR">soutien pédagogique en R</span>
+                                </li>
+                                <li>
+                                    <span class="EN">review of end-of-year projects</span>
+                                    <span class="FR">évaluation des projets de fin d'année</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="checkbox" disabled checked>
+                        <div id="fsc">
+                            <p>
+                                <span class="EN">Student teaching assistant for the Formalisation pour les sciences sociales course</span>
+                                <span class="FR">Etudiant-assistant pour le cours de Formalisation pour les sciences sociales</span>
+                            </p>
+                            <p>
+                                <span class="EN">sept 2019 - dec 2019</span>
+                                <span class="FR">sept 2019 - déc 2019</span>
+                            </p>
+                            <p>Université Libre de Bruxelles, Bruxelles</p>
+                            <ul>
+                                <li>
+                                    <span class="EN">educational support in algebra and formal logic</span>
+                                    <span class="FR">soutien pédagogique en algèbre et en logique formelle</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </fieldset>
             </div>
-            <div id="panel_skills">
+            <div id="skills_panel" class="resume_panel">
                 <fieldset>
                     <legend class="EN">Hard Skills</legend>
+                    <legend class="FR">Connaissances</legend>
+                    <div>
+                        <p class="label">Backend</p>
+                        <ul>
+                            <li>ASP.NET</li>
+                            <li>C#</li>
+                            <li>NodeJS</li>
+                            <li>PHP</li>
+                            <li>Python</li>
+                            <li>Symfony</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="label">Frontend</p>
+                        <ul>
+                            <li>Angular</li>
+                            <li>CSS3</li>
+                            <li>HTML5</li>
+                            <li>JavaScipt</li>
+                            <li>PhaserJS</li>
+                            <li>XML</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="label">
+                            <span class="EN">Databases</span>
+                            <span class="FR">Bases de données</span>
+                        </p>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>MS SQL Server</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="label">
+                            <span class="EN">Tools</span>
+                            <span class="FR">Outils</span>
+                        </p>
+                        <ul>
+                            <li>Figma</li>
+                            <li>Git</li>
+                            <li>Visual Studio</li>
+                            <li>VS Code</li>
+                        </ul>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="EN">Soft Skills</legend>
                     <legend class="FR">Compétences</legend>
-                    <p>Backend</p>
-                    <ul>
-                        <li>ASP.NET</li>
-                        <li>C#</li>
-                        <li>NodeJS</li>
-                        <li>PHP</li>
-                        <li>Python</li>
-                        <li>Symfony</li>
-                    </ul>
-                    <p>Frontend</p>
-                    <ul>
-                        <li>Angular</li>
-                        <li>CSS3</li>
-                        <li>HTML5</li>
-                        <li>JavaScipt</li>
-                        <li>PhaserJS</li>
-                        <li>XML</li>
-                    </ul>
-                    <p class="EN">Database</p>
-                    <p class="FR">Base de données</p>
-                    <ul>
-                        <li>MySQL</li>
-                        <li>MS SQL Server</li>
-                        <li>SQL</li>
-                    </ul>
-                    <p class="EN">Tools</p>
-                    <p class="FR">Outils</p>
-                    <ul>
-                        <li>Figma</li>
-                        <li>Git</li>
-                        <li>Visual Studio</li>
-                        <li>VS Code</li>
-                    </ul>
+                    <div>
+                        <input type="checkbox" disabled checked>
+                        <p>
+                            <span class="EN">Adaptability</span>
+                            <span class="FR">Adaptabilité</span>
+                        </p>
+                        <input type="checkbox" disabled checked>
+                        <p>
+                            <span class="EN">Solution oriented</span>
+                            <span class="FR">Orientée solution</span>
+                        </p>
+                        <input type="checkbox" disabled checked>
+                        <p>
+                            <span class="EN">Pedagogy</span>
+                            <span class="FR">Pédagogie</span>
+                        </p>
+                    </div>
                 </fieldset>
             </div>
         </main>
@@ -219,11 +329,11 @@
                 <div>
                     <p id="e_csharp">> C#</p>
                     <div>
-                        <p id="sansnom">(sans nom)</p>
+                        <p id="unnamed_project">unnamed_project</p>
                     </div>
                     <p id="e_js">> JavaScript</p>
                     <div>
-                        <p id="minesweeper">Minesweeper</p>
+                        <!-- <p id="minesweeper">Minesweeper</p> -->
                         <p id="myportfolio">Portfolio</p>
                     </div>
                     <p id="e_php">> PHP</p>
@@ -241,8 +351,8 @@
                     <p class="carbonquest">CarbonQuest</p>
                     <p class="tabletavern">Table Tavern</p>
                     <p class="myportfolio">Portfolio</p>
-                    <p class="minesweeper">Minesweeper</p>
-                    <p class="sansnom">(sans nom)</p>
+                    <p class="unnamed_project">(sans nom)</p>
+                    <!-- <p class="minesweeper">Minesweeper</p> -->
                 </div>
 
                 <div>
@@ -250,46 +360,42 @@
                     <p class="carbonquest">PHP MySQL</p>
                     <p class="tabletavern">Symfony JavaScript</p>
                     <p class="myportfolio">HTML CSS JavaScript</p>
-                    <p class="minesweeper">HTML CSS JavaScript</p>
-                    <p class="sansnom">C#</p>
+                    <p class="unnamed_project">C# SQL</p>
+                    <!-- <p class="minesweeper">HTML CSS JavaScript</p> -->
                 </div>
 
                 <div>
                     <p class="label">Description</p>
                     <p class="carbonquest">
-                        <span class="EN">Backend part of this project made in 3 days at Interface3. (better description coming soon)</span>
-                        <span class="FR">Partie backend de ce projet réalisé en 3 jours à Interface3. (meilleure description à venir)</span>
-                        
+                        <span class="EN">Backend part of this project done for a 3-days long hackaton at Interface3.</span>
+                        <span class="FR">Partie backend de ce projet réalisé dans le cadre d'un hackaton de 3 jours à Interface3.</span>
                     </p>
                     <p class="tabletavern">
-                        <span class="EN">Symfony project made at Interface3. (better description coming soon)</span>
-                        <span class="FR">Projet Symfony réalisé dans le cadre ma formation chez Interface3. (meilleure description à venir)</span>
-                        
+                        <span class="EN">Symfony project made at Interface3.</span>
+                        <span class="FR">Projet Symfony réalisé dans le cadre ma formation chez Interface3.</span>
                     </p>
                     <p class="myportfolio">
-                        <span class="EN">My online resume, a.k.a. the website you're currently viewing. Made during my formation at Interface3, this is an ongoing work ment to showcase my projects.</span>
-                        <span class="FR">Mon cv en ligne, soit le site que vous êtes en train de consulter. Réalisé dans le cadre de ma formation à Interface3, ceci est un projet en cours de développement servant à présenter mes projets. (meilleure description à venir)</span>
-                        
+                        <span class="EN">My online resume, a.k.a. the website you're currently viewing. Made during my training at Interface3, this is an ongoing work ment to showcase my projects.</span>
+                        <span class="FR">Mon cv en ligne, soit le site que vous êtes en train de consulter. Réalisé dans le cadre de ma formation à Interface3, ceci est un projet en cours de développement servant à présenter mes projets.</span>
                     </p>
-                    <p class="minesweeper">
-                        <span class="EN">How can you have a desktop whitout a Minsweeper game? (better description coming soon)</span>
-                        <span class="FR">Comment pourrait-on avoir un bureau sans démineur? (meilleure description à venir)</span>
-                        
+                    <p class="unnamed_project">
+                        <span class="EN">ASP.NET project made at Interface3.</span>
+                        <span class="FR">Projet ASP.Net réalisé dans le cadre ma formation chez Interface3.</span>
                     </p>
-                    <p class="sansnom">
-                        <span class="EN">(some description coming soon)</span>
-                        <span class="FR">(très bientôt, une description)</span>
-                        
-                    </p>
+                    <!-- <p class="minesweeper">
+                        <span class="EN">How can you have a desktop whitout a Minsweeper game?</span>
+                        <span class="FR">Comment pourrait-on avoir un bureau sans démineur?</span>
+                    </p> -->
                 </div>
 
                 <div>
                     <p class="label EN">Links and Preview</p>
                     <p class="label FR">Liens et Aperçu</p>
-                    <a href="" target="_blank" class="carbonquest"></a>
-                    <a href="" target="_blank" class="tabletavern"></a>
-                    <a href="" target="_blank" class="myportfolio"></a>
-                    <a href="" target="_blank" class="minesweeper"></a>
+                    <a href="https://github.com/TamVdb/itf3_Hackathon_CarbonQuest-local" target="_blank" class="carbonquest">GitHub</a>
+                    <a href="https://github.com/ThreeLeggedDuckling/I3WAD_SymfonyProject" target="_blank" class="tabletavern">GitHub</a>
+                    <a href="https://github.com/ThreeLeggedDuckling/Portfolio" target="_blank" class="myportfolio">GitHub</a>
+                    <a href="https://github.com/ThreeLeggedDuckling/I3WAD_EpreuveASP" target="_blank" class="unnamed_project">GitHub</a>
+                    <!-- <a href="" target="_blank" class="minesweeper"></a> -->
                 </div>
 
             </div>
@@ -331,8 +437,8 @@
         </header>
         <main>
             <h2>
-                <span class="EN">Ways to reach me</span>
-                <span class="FR">Comment me joindre</span>
+                <span class="EN">Socials</span>
+                <span class="FR">Réseaux</span>
             </h2>
             <div id="links">
                 <a href="https://www.linkedin.com/in/melusine-christophe/" target="_blank">

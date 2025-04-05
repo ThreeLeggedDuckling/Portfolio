@@ -2,7 +2,21 @@
     GENERAL
 */
 
-/*  classes     */
+.desktopIcon {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+}
+
+.iconTxt {
+    color: white;
+}
 
 .small {
     width: 300px;
@@ -14,6 +28,31 @@
 
 .large {
     width: 700px;
+}
+
+
+/*
+    ICONES
+*/
+
+#about {
+    top: 60px;
+    right: 25px;
+}
+
+#resume {
+    top: 140px;
+    right: 25px;
+}
+
+#portfolio {
+    top: 220px;
+    right: 25px;
+}
+
+#contact {
+    top: 300px;
+    right: 25px;
 }
 
 
