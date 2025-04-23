@@ -30,28 +30,29 @@
         <p id="lang">FR</p>
     </nav>
 
-    <!-- icônes du bureau -->
-    <div id="about" class="desktopIcon">
-        <img src="./assets/img/ducky.png" id="about_icon" class="icon windowTrigger">
-        <p class="iconTxt">
-            <span class="EN">about</span>
-            <span class="FR">a_propos</span>
-        </p>
-    </div>
-    <div id="resume" class="desktopIcon">
-        <img src="./assets/img/file.png" id="resume_icon" class="icon windowTrigger">
-        <p class="iconTxt">
-            <span class="EN">resume</span>
-            <span class="FR">experience</span>
-        </p>
-    </div>
-    <div id="portfolio" class="desktopIcon">
-        <img src="./assets/img/folder.png" id="portfolio_icon" class="icon windowTrigger">
-        <p class="iconTxt">portfolio</p>
-    </div>
-    <div id="contact" class="desktopIcon">
-        <img src="./assets/img/mail.png" id="contact_icon" class="icon windowTrigger">
-        <p class="iconTxt">contact</p>
+    <div id="icons">
+        <div id="about" class="desktopIcon">
+            <img src="./assets/img/ducky.png" id="about_icon" class="icon windowTrigger">
+            <p class="iconTxt">
+                <span class="EN">about</span>
+                <span class="FR">a_propos</span>
+            </p>
+        </div>
+        <div id="resume" class="desktopIcon">
+            <img src="./assets/img/file.png" id="resume_icon" class="icon windowTrigger">
+            <p class="iconTxt">
+                <span class="EN">resume</span>
+                <span class="FR">experience</span>
+            </p>
+        </div>
+        <div id="portfolio" class="desktopIcon">
+            <img src="./assets/img/folder.png" id="portfolio_icon" class="icon windowTrigger">
+            <p class="iconTxt">portfolio</p>
+        </div>
+        <div id="contact" class="desktopIcon">
+            <img src="./assets/img/mail.png" id="contact_icon" class="icon windowTrigger">
+            <p class="iconTxt">contact</p>
+        </div>
     </div>
     
     <dialog id="about_window" class="medium">
@@ -78,7 +79,7 @@
                         I'm a junior backend developer specialising in C# and PHP. This website is meant to emulate a desktop, feel free to close this window and have a look at the different sections to learn more about me.
                     </p>
                     <p class="lookingfor">
-                        I'm looking for a 2 months unpaid internship as a backend developer between April and June 2025.
+                        I'm looking for a 2 months unpaid internship as a backend developer between May and June 2025.
                     </p>
                 </div>
                 <div class="FR">
@@ -89,7 +90,7 @@
                         Je suis une développeuse backend junior orientée C# et PHP. Ce site émule le comportement d'un bureau d'ordinateur, libre à vous de fermer cette fenêtre et d'explorer pour en apprendre plus à mon sujet.
                     </p>
                     <p class="lookingfor">
-                        Je suis à la recherche d'un stage non rémunéré de 2 mois en tant que développeur backend pour la période d'avril à juin 2025.
+                        Je suis à la recherche d'un stage non rémunéré de 2 mois en tant que développeur backend pour la période de mai à juin 2025.
                     </p>
                 </div>
             </div>
@@ -128,7 +129,7 @@
                     <legend class="EN">Programming</legend>
                     <legend class="FR">Programmation</legend>
                     <div id="wad">
-                        <input type="checkbox" disabled>
+                        <div class="checkbox"></div>
                         <div>
                             <p>Web Application Developer</p>
                             <p>2024 - 2025</p>
@@ -140,7 +141,7 @@
                         </div>
                     </div>
                     <div id="omi">
-                        <input type="checkbox" disabled checked>
+                        <div class="checkbox checked"></div>
                         <div>
                             <p>
                                 <span class="EN">Orientation Module for IT Careers</span>
@@ -159,7 +160,7 @@
                     <legend class="EN">University</legend>
                     <legend class="FR">Université</legend>
                     <div id="crim">
-                        <input type="checkbox" disabled>
+                        <div class="checkbox"></div>
                         <div>
                             <p>
                                 <span class="EN">Master in Criminology</span>
@@ -170,7 +171,7 @@
                         </div>
                     </div>
                     <div id="shum">
-                        <input type="checkbox" disabled checked>
+                        <div class="checkbox checked"></div>
                         <div>
                             <p>
                                 <span class="EN">Bachelor in Human and Social Sciences</span>
@@ -187,7 +188,7 @@
                     <legend class="EN">Student Jobs</legend>
                     <legend class="FR">Jobs etudiants</legend>
                     <div>
-                        <input type="checkbox" disabled checked>
+                        <div class="checkbox checked"></div>
                         <div id="sna">
                             <p>
                                 <span class="EN">Student teaching assistant for the Social Network Analysis course</span>
@@ -211,7 +212,7 @@
                         </div>
                     </div>
                     <div>
-                        <input type="checkbox" disabled checked>
+                        <div class="checkbox checked"></div>
                         <div id="fsc">
                             <p>
                                 <span class="EN">Student teaching assistant for the Formalisation pour les sciences sociales course</span>
@@ -286,17 +287,17 @@
                     <legend class="EN">Soft Skills</legend>
                     <legend class="FR">Compétences</legend>
                     <div>
-                        <input type="checkbox" disabled checked>
+                        <div class="checkbox checked"></div>
                         <p>
                             <span class="EN">Adaptability</span>
                             <span class="FR">Adaptabilité</span>
                         </p>
-                        <input type="checkbox" disabled checked>
+                        <div class="checkbox checked"></div>
                         <p>
                             <span class="EN">Solution oriented</span>
                             <span class="FR">Orientée solution</span>
                         </p>
-                        <input type="checkbox" disabled checked>
+                        <div class="checkbox checked"></div>
                         <p>
                             <span class="EN">Pedagogy</span>
                             <span class="FR">Pédagogie</span>

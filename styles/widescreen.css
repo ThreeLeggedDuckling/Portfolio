@@ -2,22 +2,6 @@
     GENERAL
 */
 
-.desktopIcon {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.icon {
-    height: 40px;
-    width: 40px;
-}
-
-.iconTxt {
-    color: white;
-}
-
 .small {
     width: 300px;
 }
@@ -35,24 +19,27 @@
     ICONES
 */
 
-#about {
-    top: 60px;
-    right: 25px;
+#icons {
+    position: absolute;
+    top: 40px;
+    right: 14px;
 }
 
-#resume {
-    top: 140px;
-    right: 25px;
+.desktopIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
-#portfolio {
-    top: 220px;
-    right: 25px;
+.icon {
+    height: 40px;
+    width: 40px;
 }
 
-#contact {
-    top: 300px;
-    right: 25px;
+.iconTxt {
+    color: white;
+    max-width: 72px;
 }
 
 
