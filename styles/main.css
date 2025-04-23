@@ -231,9 +231,12 @@ dialog main>* {
 }
 
 #resume_tabs p {
-    border: 1px solid black;
     display: inline-block;
     margin: 0;
+    border-top: 2px solid #00000086;
+	border-left: 2px solid #00000086;
+	border-right: 2px solid #000000b9;
+	border-bottom: 2px solid #000000b9;
 }
 
 #resume_tabs span {
@@ -262,6 +265,22 @@ dialog main>* {
     display: none;
 }
 
+#skills_set {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill_list {
+    display: flex;
+}
+
+.skill_list div {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 /*  portfolio   */
 
@@ -288,3 +307,12 @@ dialog main>* {
     display: block;
 }
 
+#contact_form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact_form button {
+    margin-top: 5px;
+    width: 50%;
+}
